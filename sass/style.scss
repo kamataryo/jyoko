@@ -1,6 +1,6 @@
 // リセット的なもの
 html, body {
-    font-family: sans-serif;
+    font-family: serif;
     font-size: 18px;
 }
 h1, h2, h3, h4, ul, ol, li {
@@ -31,7 +31,7 @@ ul, ol {
         display: block;
         counter-increment: go_number;
 
-        @if $depth < 5 {
+        @if $depth < length($number_format) + 1 {
             &:before {
                 content: nth($number_format, $depth);
                 margin-right: 1rem;
