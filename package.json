@@ -1,0 +1,23 @@
+{
+  "name": "jyoko.css",
+  "version": "1.0.0",
+  "description": "法律文スタイル",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "法律",
+    "条",
+    "項",
+    "css"
+  ],
+  "author": "kamataryo",
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "^1.10.0",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.2.0"
+  }
+}
