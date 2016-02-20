@@ -1,10 +1,10 @@
 {
   "name": "jyoko.css",
   "version": "1.0.0",
-  "description": "法律文スタイル",
+  "description": "法律文・定款css",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "build": "gulp build"
   },
   "keywords": [
     "法律",

@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+    - 0.12
+
+branches:
+  only:
+    - master
+
+before_script: bash ./bin/build.sh
+
+script:
+  - npm test
+
+after_success:
+  - bash ./bin/deploy.sh
+
+env:
+  global:
+  - GH_REF: github.com/kamataryo/jyoko.git
+  - secure: "N6h+4EIWocMbzDBSPk9L/LYb6AP+LYrigUsVYKil/07dl+WjBRZcRQr3mA+5kPFvt3H7Btec4i9/sC7rIAop0WTC0snPI0wV+jHnjPDI1GwHEygbFQBTwL+jyQeCzbfrYyuVeLeUxk332fZSAyx8NlqyasucxfX9/CN3RkVSGVIYBaHb99bjvwMoMwKAqPwboyC34LC2nKB0ZOM7FrBEtMzKjejXXAKLlNofay2AeOD5FesdROp2yyIrtB7687aMjw2NbquK3dWuSyxHsUUV4iUZaSpw+HWghlhq74eNywQM00Iw9tiInYX2IqiRFwy6QmXTgPY1zL4ruEA00QLPCXXMe++m4tm7WD6ciaYtsP4CcswOVTP8cIP42O+h/JEt1qfKL1z3r8TtCJVmdJVUxUDQnb3y+AesMg2R1Vkq6R9QAdDbqx/8owj+qt1aBww91hIEadUBPm5wgJWBlBgzipxN33SUxrL4jAAZd/ysaV/tw2mqwmHpI0epH98uJQ3zqIOb+TuKf/bdVFcGiFoBbmddy7bDLXH7CCIRJvk6qTfV5O/70HTOranCDNKgqFrOWRbe3N3Bqe8esFnen/PKp83kTe4zbQuHcRbSeEL2di3Dna8ruEpkC9sbVL68pbvXX9KMqDm9U4ROlZ1RKiUSB1fXFTPMvNiA/QYEj4dLQ1k="

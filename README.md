@@ -1,5 +1,12 @@
 # 法律文css
+[![Build Status Images](https://travis-ci.org/KamataRyo/jyoko.svg)](https://travis-ci.org/KamataRyo/jyoko)
+
 markdownで法律文や会社定款を書くためのcss(sass)スニペット。暫定版。
+
+## 使い方
+    npm i --save jyoko
+または
+    bower i --save jyoko
 
 ## 例
 [適用例](https://kamataryo.github.io/jyoko/)
@@ -15,7 +22,7 @@ markdownで法律文や会社定款を書くためのcss(sass)スニペット。
 |-, 1|ol|条|h4でリセット|
 |-, 1|ol>li|項|olでリセット|
 |-, 1|& li~ul, & li~ol|号|項または親の号でリセット|
-|-|#fusoku|附則の開始|-|
+||#fusoku|附則の開始||
 
 ## TODOs
 - 条文の改定のスタイルを追加
