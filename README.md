@@ -1,12 +1,18 @@
 # 法律文css
 [![Build Status Images](https://travis-ci.org/KamataRyo/jyoko.svg)](https://travis-ci.org/KamataRyo/jyoko)
 
-markdownで法律文や会社定款を書くためのcss(sass)スニペット。暫定版。
+markdownやhtmlで法律文や会社定款を楽に書くためのcss(sass)スニペット。暫定版。
 
-## 使い方
+## インストール
+
     npm i --save jyoko
 または
+
     bower i --save jyoko
+
+## 使い方
+markdownのコンパイル後に当該cssを読み込んでください。
+    <link rel="stylesheet" href="path/to/the/module/style.css">
 
 ## 例
 [適用例](https://kamataryo.github.io/jyoko/)

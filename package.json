@@ -1,8 +1,8 @@
 {
-  "name": "jyoko.css",
+  "name": "jyoko",
   "version": "1.0.0",
   "description": "法律文・定款css",
-  "main": "index.js",
+  "main": "style.css",
   "scripts": {
     "build": "gulp build"
   },
@@ -14,6 +14,10 @@
   ],
   "author": "kamataryo",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:KamataRyo/jyoko.git"
+  },
   "devDependencies": {
     "coffee-script": "^1.10.0",
     "gulp": "^3.9.1",

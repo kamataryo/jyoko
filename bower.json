@@ -1,0 +1,17 @@
+{
+  "name": "jyoko",
+  "homepage": "https://github.com/KamataRyo/jyoko",
+  "authors": [
+    "KamataRyo <mugil.cephalus+github@gmail.com>"
+  ],
+  "description": "法律文・定款css",
+  "main": "style.css",
+  "moduleType": [],
+  "keywords": [
+    "法律",
+    "条",
+    "項",
+    "css"
+  ],
+  "license": "MIT"
+}
