@@ -16,7 +16,6 @@ rm -rf .git
 rm -r .gitignore
 
 echo "sass
-.gitignore
 README.md
 gulpfile.coffee
 package.json" > .gitignore
