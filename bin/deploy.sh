@@ -15,9 +15,11 @@ fi
 rm -rf .git
 rm -r .gitignore
 
-echo "*
-!index.html
-!style.css" > .gitignore
+echo "sass
+.gitignore
+README.md
+gulpfile.coffee
+package.json" > .gitignore
 
 git init
 git config user.name "kamataryo"
