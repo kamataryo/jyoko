@@ -1,4 +1,4 @@
-# 法律文css
+# 法律文css jyoko
 [![Build Status Images](https://travis-ci.org/KamataRyo/jyoko.svg)](https://travis-ci.org/KamataRyo/jyoko)
 
 markdownやhtmlで法律文や会社定款を楽に書くためのcss(sass)スニペット。暫定版。
