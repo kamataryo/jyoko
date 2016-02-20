@@ -2,6 +2,8 @@
 
 set -e
 
+echo 'aaaaaaaaaaaa'
+
 if [[ "false" != "$TRAVIS_PULL_REQUEST" ]]; then
 	echo "Not deploying pull requests."
 	exit
@@ -19,6 +21,7 @@ echo "sass
 README.md
 gulpfile.coffee
 package.json" > .gitignore
+
 
 git init
 git config user.name "kamataryo"
