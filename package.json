@@ -4,7 +4,7 @@
   "description": "法律文・定款css",
   "main": "style.css",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
     "build": "gulp build"
   },
   "keywords": [
