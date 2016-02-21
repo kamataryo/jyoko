@@ -1,4 +1,4 @@
-# 法律文css jyoko
+# 法律文css jyoko.css
 [![Build Status Images](https://travis-ci.org/KamataRyo/jyoko.svg)](https://travis-ci.org/KamataRyo/jyoko)
 [![npm version](https://badge.fury.io/js/jyoko.svg)](https://badge.fury.io/js/jyoko)
 [![Bower version](https://badge.fury.io/bo/jyoko.svg)](https://badge.fury.io/bo/jyoko)
@@ -7,10 +7,10 @@ markdownやhtmlで法律文や会社定款を楽に書くためのcss(sass)ス�
 
 ## インストール
 
-    npm i --save jyoko
+    npm i --save jyoko.css
 または
 
-    bower i --save jyoko
+    bower i --save jyoko.css
 
 ## 使い方
 markdownのコンパイル後に当該cssを読み込んでください。
