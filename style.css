@@ -1,0 +1,176 @@
+@charset "UTF-8";
+html, body {
+  font-family: serif;
+  font-size: 18px; }
+
+h1, h2, h3, h4, ul, ol, li {
+  font-size: inherit;
+  font-weight: normal;
+  margin: 0;
+  padding: 0; }
+
+ul, ol {
+  list-style: none; }
+
+h1 {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  counter-reset: hen_number; }
+
+#fusoku {
+  counter-reset: jyo_number; }
+  #fusoku:before {
+    content: "";
+    margin-right: 0; }
+  #fusoku ~ ul, #fusoku ~ ol {
+    counter-reset: go_number;
+    display: block;
+    margin-left: 1rem; }
+    #fusoku ~ ul > li, #fusoku ~ ol > li {
+      display: block;
+      counter-increment: go_number; }
+      #fusoku ~ ul > li:before, #fusoku ~ ol > li:before {
+        content: counter(go_number, cjk-ideographic);
+        margin-right: 1rem;
+        font-weight: bold; }
+      #fusoku ~ ul > li > ul, #fusoku ~ ul > li > ol, #fusoku ~ ol > li > ul, #fusoku ~ ol > li > ol {
+        counter-reset: go_number;
+        display: block;
+        margin-left: 1rem; }
+        #fusoku ~ ul > li > ul > li, #fusoku ~ ul > li > ol > li, #fusoku ~ ol > li > ul > li, #fusoku ~ ol > li > ol > li {
+          display: block;
+          counter-increment: go_number; }
+          #fusoku ~ ul > li > ul > li:before, #fusoku ~ ul > li > ol > li:before, #fusoku ~ ol > li > ul > li:before, #fusoku ~ ol > li > ol > li:before {
+            content: counter(go_number, katakana-iroha);
+            margin-right: 1rem;
+            font-weight: bold; }
+          #fusoku ~ ul > li > ul > li > ul, #fusoku ~ ul > li > ul > li > ol, #fusoku ~ ul > li > ol > li > ul, #fusoku ~ ul > li > ol > li > ol, #fusoku ~ ol > li > ul > li > ul, #fusoku ~ ol > li > ul > li > ol, #fusoku ~ ol > li > ol > li > ul, #fusoku ~ ol > li > ol > li > ol {
+            counter-reset: go_number;
+            display: block;
+            margin-left: 1rem; }
+            #fusoku ~ ul > li > ul > li > ul > li, #fusoku ~ ul > li > ul > li > ol > li, #fusoku ~ ul > li > ol > li > ul > li, #fusoku ~ ul > li > ol > li > ol > li, #fusoku ~ ol > li > ul > li > ul > li, #fusoku ~ ol > li > ul > li > ol > li, #fusoku ~ ol > li > ol > li > ul > li, #fusoku ~ ol > li > ol > li > ol > li {
+              display: block;
+              counter-increment: go_number; }
+              #fusoku ~ ul > li > ul > li > ul > li:before, #fusoku ~ ul > li > ul > li > ol > li:before, #fusoku ~ ul > li > ol > li > ul > li:before, #fusoku ~ ul > li > ol > li > ol > li:before, #fusoku ~ ol > li > ul > li > ul > li:before, #fusoku ~ ol > li > ul > li > ol > li:before, #fusoku ~ ol > li > ol > li > ul > li:before, #fusoku ~ ol > li > ol > li > ol > li:before {
+                content: "（" counter(go_number, decimal) "）";
+                margin-right: 1rem;
+                font-weight: bold; }
+              #fusoku ~ ul > li > ul > li > ul > li > ul, #fusoku ~ ul > li > ul > li > ul > li > ol, #fusoku ~ ul > li > ul > li > ol > li > ul, #fusoku ~ ul > li > ul > li > ol > li > ol, #fusoku ~ ul > li > ol > li > ul > li > ul, #fusoku ~ ul > li > ol > li > ul > li > ol, #fusoku ~ ul > li > ol > li > ol > li > ul, #fusoku ~ ul > li > ol > li > ol > li > ol, #fusoku ~ ol > li > ul > li > ul > li > ul, #fusoku ~ ol > li > ul > li > ul > li > ol, #fusoku ~ ol > li > ul > li > ol > li > ul, #fusoku ~ ol > li > ul > li > ol > li > ol, #fusoku ~ ol > li > ol > li > ul > li > ul, #fusoku ~ ol > li > ol > li > ul > li > ol, #fusoku ~ ol > li > ol > li > ol > li > ul, #fusoku ~ ol > li > ol > li > ol > li > ol {
+                counter-reset: go_number;
+                display: block;
+                margin-left: 1rem; }
+                #fusoku ~ ul > li > ul > li > ul > li > ul > li, #fusoku ~ ul > li > ul > li > ul > li > ol > li, #fusoku ~ ul > li > ul > li > ol > li > ul > li, #fusoku ~ ul > li > ul > li > ol > li > ol > li, #fusoku ~ ul > li > ol > li > ul > li > ul > li, #fusoku ~ ul > li > ol > li > ul > li > ol > li, #fusoku ~ ul > li > ol > li > ol > li > ul > li, #fusoku ~ ul > li > ol > li > ol > li > ol > li, #fusoku ~ ol > li > ul > li > ul > li > ul > li, #fusoku ~ ol > li > ul > li > ul > li > ol > li, #fusoku ~ ol > li > ul > li > ol > li > ul > li, #fusoku ~ ol > li > ul > li > ol > li > ol > li, #fusoku ~ ol > li > ol > li > ul > li > ul > li, #fusoku ~ ol > li > ol > li > ul > li > ol > li, #fusoku ~ ol > li > ol > li > ol > li > ul > li, #fusoku ~ ol > li > ol > li > ol > li > ol > li {
+                  display: block;
+                  counter-increment: go_number; }
+                  #fusoku ~ ul > li > ul > li > ul > li > ul > li:before, #fusoku ~ ul > li > ul > li > ul > li > ol > li:before, #fusoku ~ ul > li > ul > li > ol > li > ul > li:before, #fusoku ~ ul > li > ul > li > ol > li > ol > li:before, #fusoku ~ ul > li > ol > li > ul > li > ul > li:before, #fusoku ~ ul > li > ol > li > ul > li > ol > li:before, #fusoku ~ ul > li > ol > li > ol > li > ul > li:before, #fusoku ~ ul > li > ol > li > ol > li > ol > li:before, #fusoku ~ ol > li > ul > li > ul > li > ul > li:before, #fusoku ~ ol > li > ul > li > ul > li > ol > li:before, #fusoku ~ ol > li > ul > li > ol > li > ul > li:before, #fusoku ~ ol > li > ul > li > ol > li > ol > li:before, #fusoku ~ ol > li > ol > li > ul > li > ul > li:before, #fusoku ~ ol > li > ol > li > ul > li > ol > li:before, #fusoku ~ ol > li > ol > li > ol > li > ul > li:before, #fusoku ~ ol > li > ol > li > ol > li > ol > li:before {
+                    content: "（" counter(go_number, lower-roman) "）";
+                    margin-right: 1rem;
+                    font-weight: bold; }
+                  #fusoku ~ ul > li > ul > li > ul > li > ul > li > ul, #fusoku ~ ul > li > ul > li > ul > li > ul > li > ol, #fusoku ~ ul > li > ul > li > ul > li > ol > li > ul, #fusoku ~ ul > li > ul > li > ul > li > ol > li > ol, #fusoku ~ ul > li > ul > li > ol > li > ul > li > ul, #fusoku ~ ul > li > ul > li > ol > li > ul > li > ol, #fusoku ~ ul > li > ul > li > ol > li > ol > li > ul, #fusoku ~ ul > li > ul > li > ol > li > ol > li > ol, #fusoku ~ ul > li > ol > li > ul > li > ul > li > ul, #fusoku ~ ul > li > ol > li > ul > li > ul > li > ol, #fusoku ~ ul > li > ol > li > ul > li > ol > li > ul, #fusoku ~ ul > li > ol > li > ul > li > ol > li > ol, #fusoku ~ ul > li > ol > li > ol > li > ul > li > ul, #fusoku ~ ul > li > ol > li > ol > li > ul > li > ol, #fusoku ~ ul > li > ol > li > ol > li > ol > li > ul, #fusoku ~ ul > li > ol > li > ol > li > ol > li > ol, #fusoku ~ ol > li > ul > li > ul > li > ul > li > ul, #fusoku ~ ol > li > ul > li > ul > li > ul > li > ol, #fusoku ~ ol > li > ul > li > ul > li > ol > li > ul, #fusoku ~ ol > li > ul > li > ul > li > ol > li > ol, #fusoku ~ ol > li > ul > li > ol > li > ul > li > ul, #fusoku ~ ol > li > ul > li > ol > li > ul > li > ol, #fusoku ~ ol > li > ul > li > ol > li > ol > li > ul, #fusoku ~ ol > li > ul > li > ol > li > ol > li > ol, #fusoku ~ ol > li > ol > li > ul > li > ul > li > ul, #fusoku ~ ol > li > ol > li > ul > li > ul > li > ol, #fusoku ~ ol > li > ol > li > ul > li > ol > li > ul, #fusoku ~ ol > li > ol > li > ul > li > ol > li > ol, #fusoku ~ ol > li > ol > li > ol > li > ul > li > ul, #fusoku ~ ol > li > ol > li > ol > li > ul > li > ol, #fusoku ~ ol > li > ol > li > ol > li > ol > li > ul, #fusoku ~ ol > li > ol > li > ol > li > ol > li > ol {
+                    counter-reset: go_number;
+                    display: block;
+                    margin-left: 1rem; }
+                    #fusoku ~ ul > li > ul > li > ul > li > ul > li > ul > li, #fusoku ~ ul > li > ul > li > ul > li > ul > li > ol > li, #fusoku ~ ul > li > ul > li > ul > li > ol > li > ul > li, #fusoku ~ ul > li > ul > li > ul > li > ol > li > ol > li, #fusoku ~ ul > li > ul > li > ol > li > ul > li > ul > li, #fusoku ~ ul > li > ul > li > ol > li > ul > li > ol > li, #fusoku ~ ul > li > ul > li > ol > li > ol > li > ul > li, #fusoku ~ ul > li > ul > li > ol > li > ol > li > ol > li, #fusoku ~ ul > li > ol > li > ul > li > ul > li > ul > li, #fusoku ~ ul > li > ol > li > ul > li > ul > li > ol > li, #fusoku ~ ul > li > ol > li > ul > li > ol > li > ul > li, #fusoku ~ ul > li > ol > li > ul > li > ol > li > ol > li, #fusoku ~ ul > li > ol > li > ol > li > ul > li > ul > li, #fusoku ~ ul > li > ol > li > ol > li > ul > li > ol > li, #fusoku ~ ul > li > ol > li > ol > li > ol > li > ul > li, #fusoku ~ ul > li > ol > li > ol > li > ol > li > ol > li, #fusoku ~ ol > li > ul > li > ul > li > ul > li > ul > li, #fusoku ~ ol > li > ul > li > ul > li > ul > li > ol > li, #fusoku ~ ol > li > ul > li > ul > li > ol > li > ul > li, #fusoku ~ ol > li > ul > li > ul > li > ol > li > ol > li, #fusoku ~ ol > li > ul > li > ol > li > ul > li > ul > li, #fusoku ~ ol > li > ul > li > ol > li > ul > li > ol > li, #fusoku ~ ol > li > ul > li > ol > li > ol > li > ul > li, #fusoku ~ ol > li > ul > li > ol > li > ol > li > ol > li, #fusoku ~ ol > li > ol > li > ul > li > ul > li > ul > li, #fusoku ~ ol > li > ol > li > ul > li > ul > li > ol > li, #fusoku ~ ol > li > ol > li > ul > li > ol > li > ul > li, #fusoku ~ ol > li > ol > li > ul > li > ol > li > ol > li, #fusoku ~ ol > li > ol > li > ol > li > ul > li > ul > li, #fusoku ~ ol > li > ol > li > ol > li > ul > li > ol > li, #fusoku ~ ol > li > ol > li > ol > li > ol > li > ul > li, #fusoku ~ ol > li > ol > li > ol > li > ol > li > ol > li {
+                      display: block;
+                      counter-increment: go_number; }
+
+h2 {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  text-indent: 1rem;
+  counter-reset: syo_number;
+  counter-increment: hen_number; }
+  h2:before {
+    content: "第" counter(hen_number, cjk-ideographic) "編";
+    margin-right: 1rem; }
+
+h3 {
+  display: block;
+  font-weight: bold;
+  margin: 1rem 0;
+  text-indent: 1rem;
+  counter-increment: syo_number; }
+  h3:before {
+    content: "第" counter(syo_number, cjk-ideographic) "章";
+    margin-right: 1rem; }
+
+h4 {
+  display: block;
+  font-weight: normal;
+  text-indent: 1rem; }
+  h4:before {
+    content: "（"; }
+  h4:after {
+    content: "）"; }
+
+h4 ~ ul, h4 ~ ol {
+  counter-increment: jyo_number;
+  counter-reset: ko_number;
+  display: block;
+  margin: 0 0 1rem 1rem;
+  text-indent: -1rem; }
+  h4 ~ ul > li, h4 ~ ol > li {
+    display: block;
+    counter-increment: ko_number; }
+    h4 ~ ul > li:nth-child(1):before, h4 ~ ol > li:nth-child(1):before {
+      content: "第" counter(jyo_number, cjk-ideographic) "条";
+      font-weight: bold;
+      margin-right: 1rem; }
+    h4 ~ ul > li:not(:nth-child(1)):before, h4 ~ ol > li:not(:nth-child(1)):before {
+      content: counter(ko_number);
+      margin-right: 1rem; }
+    h4 ~ ul > li > ul, h4 ~ ul > li > ol, h4 ~ ol > li > ul, h4 ~ ol > li > ol {
+      counter-reset: go_number;
+      display: block;
+      margin-left: 1rem; }
+      h4 ~ ul > li > ul > li, h4 ~ ul > li > ol > li, h4 ~ ol > li > ul > li, h4 ~ ol > li > ol > li {
+        display: block;
+        counter-increment: go_number; }
+        h4 ~ ul > li > ul > li:before, h4 ~ ul > li > ol > li:before, h4 ~ ol > li > ul > li:before, h4 ~ ol > li > ol > li:before {
+          content: counter(go_number, cjk-ideographic);
+          margin-right: 1rem;
+          font-weight: bold; }
+        h4 ~ ul > li > ul > li > ul, h4 ~ ul > li > ul > li > ol, h4 ~ ul > li > ol > li > ul, h4 ~ ul > li > ol > li > ol, h4 ~ ol > li > ul > li > ul, h4 ~ ol > li > ul > li > ol, h4 ~ ol > li > ol > li > ul, h4 ~ ol > li > ol > li > ol {
+          counter-reset: go_number;
+          display: block;
+          margin-left: 1rem; }
+          h4 ~ ul > li > ul > li > ul > li, h4 ~ ul > li > ul > li > ol > li, h4 ~ ul > li > ol > li > ul > li, h4 ~ ul > li > ol > li > ol > li, h4 ~ ol > li > ul > li > ul > li, h4 ~ ol > li > ul > li > ol > li, h4 ~ ol > li > ol > li > ul > li, h4 ~ ol > li > ol > li > ol > li {
+            display: block;
+            counter-increment: go_number; }
+            h4 ~ ul > li > ul > li > ul > li:before, h4 ~ ul > li > ul > li > ol > li:before, h4 ~ ul > li > ol > li > ul > li:before, h4 ~ ul > li > ol > li > ol > li:before, h4 ~ ol > li > ul > li > ul > li:before, h4 ~ ol > li > ul > li > ol > li:before, h4 ~ ol > li > ol > li > ul > li:before, h4 ~ ol > li > ol > li > ol > li:before {
+              content: counter(go_number, katakana-iroha);
+              margin-right: 1rem;
+              font-weight: bold; }
+            h4 ~ ul > li > ul > li > ul > li > ul, h4 ~ ul > li > ul > li > ul > li > ol, h4 ~ ul > li > ul > li > ol > li > ul, h4 ~ ul > li > ul > li > ol > li > ol, h4 ~ ul > li > ol > li > ul > li > ul, h4 ~ ul > li > ol > li > ul > li > ol, h4 ~ ul > li > ol > li > ol > li > ul, h4 ~ ul > li > ol > li > ol > li > ol, h4 ~ ol > li > ul > li > ul > li > ul, h4 ~ ol > li > ul > li > ul > li > ol, h4 ~ ol > li > ul > li > ol > li > ul, h4 ~ ol > li > ul > li > ol > li > ol, h4 ~ ol > li > ol > li > ul > li > ul, h4 ~ ol > li > ol > li > ul > li > ol, h4 ~ ol > li > ol > li > ol > li > ul, h4 ~ ol > li > ol > li > ol > li > ol {
+              counter-reset: go_number;
+              display: block;
+              margin-left: 1rem; }
+              h4 ~ ul > li > ul > li > ul > li > ul > li, h4 ~ ul > li > ul > li > ul > li > ol > li, h4 ~ ul > li > ul > li > ol > li > ul > li, h4 ~ ul > li > ul > li > ol > li > ol > li, h4 ~ ul > li > ol > li > ul > li > ul > li, h4 ~ ul > li > ol > li > ul > li > ol > li, h4 ~ ul > li > ol > li > ol > li > ul > li, h4 ~ ul > li > ol > li > ol > li > ol > li, h4 ~ ol > li > ul > li > ul > li > ul > li, h4 ~ ol > li > ul > li > ul > li > ol > li, h4 ~ ol > li > ul > li > ol > li > ul > li, h4 ~ ol > li > ul > li > ol > li > ol > li, h4 ~ ol > li > ol > li > ul > li > ul > li, h4 ~ ol > li > ol > li > ul > li > ol > li, h4 ~ ol > li > ol > li > ol > li > ul > li, h4 ~ ol > li > ol > li > ol > li > ol > li {
+                display: block;
+                counter-increment: go_number; }
+                h4 ~ ul > li > ul > li > ul > li > ul > li:before, h4 ~ ul > li > ul > li > ul > li > ol > li:before, h4 ~ ul > li > ul > li > ol > li > ul > li:before, h4 ~ ul > li > ul > li > ol > li > ol > li:before, h4 ~ ul > li > ol > li > ul > li > ul > li:before, h4 ~ ul > li > ol > li > ul > li > ol > li:before, h4 ~ ul > li > ol > li > ol > li > ul > li:before, h4 ~ ul > li > ol > li > ol > li > ol > li:before, h4 ~ ol > li > ul > li > ul > li > ul > li:before, h4 ~ ol > li > ul > li > ul > li > ol > li:before, h4 ~ ol > li > ul > li > ol > li > ul > li:before, h4 ~ ol > li > ul > li > ol > li > ol > li:before, h4 ~ ol > li > ol > li > ul > li > ul > li:before, h4 ~ ol > li > ol > li > ul > li > ol > li:before, h4 ~ ol > li > ol > li > ol > li > ul > li:before, h4 ~ ol > li > ol > li > ol > li > ol > li:before {
+                  content: "（" counter(go_number, decimal) "）";
+                  margin-right: 1rem;
+                  font-weight: bold; }
+                h4 ~ ul > li > ul > li > ul > li > ul > li > ul, h4 ~ ul > li > ul > li > ul > li > ul > li > ol, h4 ~ ul > li > ul > li > ul > li > ol > li > ul, h4 ~ ul > li > ul > li > ul > li > ol > li > ol, h4 ~ ul > li > ul > li > ol > li > ul > li > ul, h4 ~ ul > li > ul > li > ol > li > ul > li > ol, h4 ~ ul > li > ul > li > ol > li > ol > li > ul, h4 ~ ul > li > ul > li > ol > li > ol > li > ol, h4 ~ ul > li > ol > li > ul > li > ul > li > ul, h4 ~ ul > li > ol > li > ul > li > ul > li > ol, h4 ~ ul > li > ol > li > ul > li > ol > li > ul, h4 ~ ul > li > ol > li > ul > li > ol > li > ol, h4 ~ ul > li > ol > li > ol > li > ul > li > ul, h4 ~ ul > li > ol > li > ol > li > ul > li > ol, h4 ~ ul > li > ol > li > ol > li > ol > li > ul, h4 ~ ul > li > ol > li > ol > li > ol > li > ol, h4 ~ ol > li > ul > li > ul > li > ul > li > ul, h4 ~ ol > li > ul > li > ul > li > ul > li > ol, h4 ~ ol > li > ul > li > ul > li > ol > li > ul, h4 ~ ol > li > ul > li > ul > li > ol > li > ol, h4 ~ ol > li > ul > li > ol > li > ul > li > ul, h4 ~ ol > li > ul > li > ol > li > ul > li > ol, h4 ~ ol > li > ul > li > ol > li > ol > li > ul, h4 ~ ol > li > ul > li > ol > li > ol > li > ol, h4 ~ ol > li > ol > li > ul > li > ul > li > ul, h4 ~ ol > li > ol > li > ul > li > ul > li > ol, h4 ~ ol > li > ol > li > ul > li > ol > li > ul, h4 ~ ol > li > ol > li > ul > li > ol > li > ol, h4 ~ ol > li > ol > li > ol > li > ul > li > ul, h4 ~ ol > li > ol > li > ol > li > ul > li > ol, h4 ~ ol > li > ol > li > ol > li > ol > li > ul, h4 ~ ol > li > ol > li > ol > li > ol > li > ol {
+                  counter-reset: go_number;
+                  display: block;
+                  margin-left: 1rem; }
+                  h4 ~ ul > li > ul > li > ul > li > ul > li > ul > li, h4 ~ ul > li > ul > li > ul > li > ul > li > ol > li, h4 ~ ul > li > ul > li > ul > li > ol > li > ul > li, h4 ~ ul > li > ul > li > ul > li > ol > li > ol > li, h4 ~ ul > li > ul > li > ol > li > ul > li > ul > li, h4 ~ ul > li > ul > li > ol > li > ul > li > ol > li, h4 ~ ul > li > ul > li > ol > li > ol > li > ul > li, h4 ~ ul > li > ul > li > ol > li > ol > li > ol > li, h4 ~ ul > li > ol > li > ul > li > ul > li > ul > li, h4 ~ ul > li > ol > li > ul > li > ul > li > ol > li, h4 ~ ul > li > ol > li > ul > li > ol > li > ul > li, h4 ~ ul > li > ol > li > ul > li > ol > li > ol > li, h4 ~ ul > li > ol > li > ol > li > ul > li > ul > li, h4 ~ ul > li > ol > li > ol > li > ul > li > ol > li, h4 ~ ul > li > ol > li > ol > li > ol > li > ul > li, h4 ~ ul > li > ol > li > ol > li > ol > li > ol > li, h4 ~ ol > li > ul > li > ul > li > ul > li > ul > li, h4 ~ ol > li > ul > li > ul > li > ul > li > ol > li, h4 ~ ol > li > ul > li > ul > li > ol > li > ul > li, h4 ~ ol > li > ul > li > ul > li > ol > li > ol > li, h4 ~ ol > li > ul > li > ol > li > ul > li > ul > li, h4 ~ ol > li > ul > li > ol > li > ul > li > ol > li, h4 ~ ol > li > ul > li > ol > li > ol > li > ul > li, h4 ~ ol > li > ul > li > ol > li > ol > li > ol > li, h4 ~ ol > li > ol > li > ul > li > ul > li > ul > li, h4 ~ ol > li > ol > li > ul > li > ul > li > ol > li, h4 ~ ol > li > ol > li > ul > li > ol > li > ul > li, h4 ~ ol > li > ol > li > ul > li > ol > li > ol > li, h4 ~ ol > li > ol > li > ol > li > ul > li > ul > li, h4 ~ ol > li > ol > li > ol > li > ul > li > ol > li, h4 ~ ol > li > ol > li > ol > li > ol > li > ul > li, h4 ~ ol > li > ol > li > ol > li > ol > li > ol > li {
+                    display: block;
+                    counter-increment: go_number; }
+                    h4 ~ ul > li > ul > li > ul > li > ul > li > ul > li:before, h4 ~ ul > li > ul > li > ul > li > ul > li > ol > li:before, h4 ~ ul > li > ul > li > ul > li > ol > li > ul > li:before, h4 ~ ul > li > ul > li > ul > li > ol > li > ol > li:before, h4 ~ ul > li > ul > li > ol > li > ul > li > ul > li:before, h4 ~ ul > li > ul > li > ol > li > ul > li > ol > li:before, h4 ~ ul > li > ul > li > ol > li > ol > li > ul > li:before, h4 ~ ul > li > ul > li > ol > li > ol > li > ol > li:before, h4 ~ ul > li > ol > li > ul > li > ul > li > ul > li:before, h4 ~ ul > li > ol > li > ul > li > ul > li > ol > li:before, h4 ~ ul > li > ol > li > ul > li > ol > li > ul > li:before, h4 ~ ul > li > ol > li > ul > li > ol > li > ol > li:before, h4 ~ ul > li > ol > li > ol > li > ul > li > ul > li:before, h4 ~ ul > li > ol > li > ol > li > ul > li > ol > li:before, h4 ~ ul > li > ol > li > ol > li > ol > li > ul > li:before, h4 ~ ul > li > ol > li > ol > li > ol > li > ol > li:before, h4 ~ ol > li > ul > li > ul > li > ul > li > ul > li:before, h4 ~ ol > li > ul > li > ul > li > ul > li > ol > li:before, h4 ~ ol > li > ul > li > ul > li > ol > li > ul > li:before, h4 ~ ol > li > ul > li > ul > li > ol > li > ol > li:before, h4 ~ ol > li > ul > li > ol > li > ul > li > ul > li:before, h4 ~ ol > li > ul > li > ol > li > ul > li > ol > li:before, h4 ~ ol > li > ul > li > ol > li > ol > li > ul > li:before, h4 ~ ol > li > ul > li > ol > li > ol > li > ol > li:before, h4 ~ ol > li > ol > li > ul > li > ul > li > ul > li:before, h4 ~ ol > li > ol > li > ul > li > ul > li > ol > li:before, h4 ~ ol > li > ol > li > ul > li > ol > li > ul > li:before, h4 ~ ol > li > ol > li > ul > li > ol > li > ol > li:before, h4 ~ ol > li > ol > li > ol > li > ul > li > ul > li:before, h4 ~ ol > li > ol > li > ol > li > ul > li > ol > li:before, h4 ~ ol > li > ol > li > ol > li > ol > li > ul > li:before, h4 ~ ol > li > ol > li > ol > li > ol > li > ol > li:before {
+                      content: "（" counter(go_number, lower-roman) "）";
+                      margin-right: 1rem;
+                      font-weight: bold; }
+                    h4 ~ ul > li > ul > li > ul > li > ul > li > ul > li > ul, h4 ~ ul > li > ul > li > ul > li > ul > li > ul > li > ol, h4 ~ ul > li > ul > li > ul > li > ul > li > ol > li > ul, h4 ~ ul > li > ul > li > ul > li > ul > li > ol > li > ol, h4 ~ ul > li > ul > li > ul > li > ol > li > ul > li > ul, h4 ~ ul > li > ul > li > ul > li > ol > li > ul > li > ol, h4 ~ ul > li > ul > li > ul > li > ol > li > ol > li > ul, h4 ~ ul > li > ul > li > ul > li > ol > li > ol > li > ol, h4 ~ ul > li > ul > li > ol > li > ul > li > ul > li > ul, h4 ~ ul > li > ul > li > ol > li > ul > li > ul > li > ol, h4 ~ ul > li > ul > li > ol > li > ul > li > ol > li > ul, h4 ~ ul > li > ul > li > ol > li > ul > li > ol > li > ol, h4 ~ ul > li > ul > li > ol > li > ol > li > ul > li > ul, h4 ~ ul > li > ul > li > ol > li > ol > li > ul > li > ol, h4 ~ ul > li > ul > li > ol > li > ol > li > ol > li > ul, h4 ~ ul > li > ul > li > ol > li > ol > li > ol > li > ol, h4 ~ ul > li > ol > li > ul > li > ul > li > ul > li > ul, h4 ~ ul > li > ol > li > ul > li > ul > li > ul > li > ol, h4 ~ ul > li > ol > li > ul > li > ul > li > ol > li > ul, h4 ~ ul > li > ol > li > ul > li > ul > li > ol > li > ol, h4 ~ ul > li > ol > li > ul > li > ol > li > ul > li > ul, h4 ~ ul > li > ol > li > ul > li > ol > li > ul > li > ol, h4 ~ ul > li > ol > li > ul > li > ol > li > ol > li > ul, h4 ~ ul > li > ol > li > ul > li > ol > li > ol > li > ol, h4 ~ ul > li > ol > li > ol > li > ul > li > ul > li > ul, h4 ~ ul > li > ol > li > ol > li > ul > li > ul > li > ol, h4 ~ ul > li > ol > li > ol > li > ul > li > ol > li > ul, h4 ~ ul > li > ol > li > ol > li > ul > li > ol > li > ol, h4 ~ ul > li > ol > li > ol > li > ol > li > ul > li > ul, h4 ~ ul > li > ol > li > ol > li > ol > li > ul > li > ol, h4 ~ ul > li > ol > li > ol > li > ol > li > ol > li > ul, h4 ~ ul > li > ol > li > ol > li > ol > li > ol > li > ol, h4 ~ ol > li > ul > li > ul > li > ul > li > ul > li > ul, h4 ~ ol > li > ul > li > ul > li > ul > li > ul > li > ol, h4 ~ ol > li > ul > li > ul > li > ul > li > ol > li > ul, h4 ~ ol > li > ul > li > ul > li > ul > li > ol > li > ol, h4 ~ ol > li > ul > li > ul > li > ol > li > ul > li > ul, h4 ~ ol > li > ul > li > ul > li > ol > li > ul > li > ol, h4 ~ ol > li > ul > li > ul > li > ol > li > ol > li > ul, h4 ~ ol > li > ul > li > ul > li > ol > li > ol > li > ol, h4 ~ ol > li > ul > li > ol > li > ul > li > ul > li > ul, h4 ~ ol > li > ul > li > ol > li > ul > li > ul > li > ol, h4 ~ ol > li > ul > li > ol > li > ul > li > ol > li > ul, h4 ~ ol > li > ul > li > ol > li > ul > li > ol > li > ol, h4 ~ ol > li > ul > li > ol > li > ol > li > ul > li > ul, h4 ~ ol > li > ul > li > ol > li > ol > li > ul > li > ol, h4 ~ ol > li > ul > li > ol > li > ol > li > ol > li > ul, h4 ~ ol > li > ul > li > ol > li > ol > li > ol > li > ol, h4 ~ ol > li > ol > li > ul > li > ul > li > ul > li > ul, h4 ~ ol > li > ol > li > ul > li > ul > li > ul > li > ol, h4 ~ ol > li > ol > li > ul > li > ul > li > ol > li > ul, h4 ~ ol > li > ol > li > ul > li > ul > li > ol > li > ol, h4 ~ ol > li > ol > li > ul > li > ol > li > ul > li > ul, h4 ~ ol > li > ol > li > ul > li > ol > li > ul > li > ol, h4 ~ ol > li > ol > li > ul > li > ol > li > ol > li > ul, h4 ~ ol > li > ol > li > ul > li > ol > li > ol > li > ol, h4 ~ ol > li > ol > li > ol > li > ul > li > ul > li > ul, h4 ~ ol > li > ol > li > ol > li > ul > li > ul > li > ol, h4 ~ ol > li > ol > li > ol > li > ul > li > ol > li > ul, h4 ~ ol > li > ol > li > ol > li > ul > li > ol > li > ol, h4 ~ ol > li > ol > li > ol > li > ol > li > ul > li > ul, h4 ~ ol > li > ol > li > ol > li > ol > li > ul > li > ol, h4 ~ ol > li > ol > li > ol > li > ol > li > ol > li > ul, h4 ~ ol > li > ol > li > ol > li > ol > li > ol > li > ol {
+                      counter-reset: go_number;
+                      display: block;
+                      margin-left: 1rem; }
+                      h4 ~ ul > li > ul > li > ul > li > ul > li > ul > li > ul > li, h4 ~ ul > li > ul > li > ul > li > ul > li > ul > li > ol > li, h4 ~ ul > li > ul > li > ul > li > ul > li > ol > li > ul > li, h4 ~ ul > li > ul > li > ul > li > ul > li > ol > li > ol > li, h4 ~ ul > li > ul > li > ul > li > ol > li > ul > li > ul > li, h4 ~ ul > li > ul > li > ul > li > ol > li > ul > li > ol > li, h4 ~ ul > li > ul > li > ul > li > ol > li > ol > li > ul > li, h4 ~ ul > li > ul > li > ul > li > ol > li > ol > li > ol > li, h4 ~ ul > li > ul > li > ol > li > ul > li > ul > li > ul > li, h4 ~ ul > li > ul > li > ol > li > ul > li > ul > li > ol > li, h4 ~ ul > li > ul > li > ol > li > ul > li > ol > li > ul > li, h4 ~ ul > li > ul > li > ol > li > ul > li > ol > li > ol > li, h4 ~ ul > li > ul > li > ol > li > ol > li > ul > li > ul > li, h4 ~ ul > li > ul > li > ol > li > ol > li > ul > li > ol > li, h4 ~ ul > li > ul > li > ol > li > ol > li > ol > li > ul > li, h4 ~ ul > li > ul > li > ol > li > ol > li > ol > li > ol > li, h4 ~ ul > li > ol > li > ul > li > ul > li > ul > li > ul > li, h4 ~ ul > li > ol > li > ul > li > ul > li > ul > li > ol > li, h4 ~ ul > li > ol > li > ul > li > ul > li > ol > li > ul > li, h4 ~ ul > li > ol > li > ul > li > ul > li > ol > li > ol > li, h4 ~ ul > li > ol > li > ul > li > ol > li > ul > li > ul > li, h4 ~ ul > li > ol > li > ul > li > ol > li > ul > li > ol > li, h4 ~ ul > li > ol > li > ul > li > ol > li > ol > li > ul > li, h4 ~ ul > li > ol > li > ul > li > ol > li > ol > li > ol > li, h4 ~ ul > li > ol > li > ol > li > ul > li > ul > li > ul > li, h4 ~ ul > li > ol > li > ol > li > ul > li > ul > li > ol > li, h4 ~ ul > li > ol > li > ol > li > ul > li > ol > li > ul > li, h4 ~ ul > li > ol > li > ol > li > ul > li > ol > li > ol > li, h4 ~ ul > li > ol > li > ol > li > ol > li > ul > li > ul > li, h4 ~ ul > li > ol > li > ol > li > ol > li > ul > li > ol > li, h4 ~ ul > li > ol > li > ol > li > ol > li > ol > li > ul > li, h4 ~ ul > li > ol > li > ol > li > ol > li > ol > li > ol > li, h4 ~ ol > li > ul > li > ul > li > ul > li > ul > li > ul > li, h4 ~ ol > li > ul > li > ul > li > ul > li > ul > li > ol > li, h4 ~ ol > li > ul > li > ul > li > ul > li > ol > li > ul > li, h4 ~ ol > li > ul > li > ul > li > ul > li > ol > li > ol > li, h4 ~ ol > li > ul > li > ul > li > ol > li > ul > li > ul > li, h4 ~ ol > li > ul > li > ul > li > ol > li > ul > li > ol > li, h4 ~ ol > li > ul > li > ul > li > ol > li > ol > li > ul > li, h4 ~ ol > li > ul > li > ul > li > ol > li > ol > li > ol > li, h4 ~ ol > li > ul > li > ol > li > ul > li > ul > li > ul > li, h4 ~ ol > li > ul > li > ol > li > ul > li > ul > li > ol > li, h4 ~ ol > li > ul > li > ol > li > ul > li > ol > li > ul > li, h4 ~ ol > li > ul > li > ol > li > ul > li > ol > li > ol > li, h4 ~ ol > li > ul > li > ol > li > ol > li > ul > li > ul > li, h4 ~ ol > li > ul > li > ol > li > ol > li > ul > li > ol > li, h4 ~ ol > li > ul > li > ol > li > ol > li > ol > li > ul > li, h4 ~ ol > li > ul > li > ol > li > ol > li > ol > li > ol > li, h4 ~ ol > li > ol > li > ul > li > ul > li > ul > li > ul > li, h4 ~ ol > li > ol > li > ul > li > ul > li > ul > li > ol > li, h4 ~ ol > li > ol > li > ul > li > ul > li > ol > li > ul > li, h4 ~ ol > li > ol > li > ul > li > ul > li > ol > li > ol > li, h4 ~ ol > li > ol > li > ul > li > ol > li > ul > li > ul > li, h4 ~ ol > li > ol > li > ul > li > ol > li > ul > li > ol > li, h4 ~ ol > li > ol > li > ul > li > ol > li > ol > li > ul > li, h4 ~ ol > li > ol > li > ul > li > ol > li > ol > li > ol > li, h4 ~ ol > li > ol > li > ol > li > ul > li > ul > li > ul > li, h4 ~ ol > li > ol > li > ol > li > ul > li > ul > li > ol > li, h4 ~ ol > li > ol > li > ol > li > ul > li > ol > li > ul > li, h4 ~ ol > li > ol > li > ol > li > ul > li > ol > li > ol > li, h4 ~ ol > li > ol > li > ol > li > ol > li > ul > li > ul > li, h4 ~ ol > li > ol > li > ol > li > ol > li > ul > li > ol > li, h4 ~ ol > li > ol > li > ol > li > ol > li > ol > li > ul > li, h4 ~ ol > li > ol > li > ol > li > ol > li > ol > li > ol > li {
+                        display: block;
+                        counter-increment: go_number; }
