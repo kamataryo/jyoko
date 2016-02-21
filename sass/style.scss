@@ -13,7 +13,6 @@ ul, ol {
     list-style: none;
 }
 
-{{{{
 
 // 再帰的に号を定義
 @mixin go($depth:1) {
