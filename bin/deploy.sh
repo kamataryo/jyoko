@@ -2,7 +2,6 @@
 
 set -e
 
-echo 'aaaaaaaaaaaa'
 
 if [[ "false" != "$TRAVIS_PULL_REQUEST" ]]; then
 	echo "Not deploying pull requests."
