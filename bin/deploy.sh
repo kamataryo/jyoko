@@ -16,7 +16,12 @@ fi
 rm -rf .git
 rm -r .gitignore
 
-echo "sass
+echo "bin
+sass
+node_modules
+.gitignore
+.travis.yml
+bower.json
 README.md
 gulpfile.coffee
 package.json" > .gitignore
