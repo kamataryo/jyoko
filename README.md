@@ -7,14 +7,20 @@ markdownやhtmlで法律文や会社定款を楽に書くためのcss(sass)ス�
 
 ## インストール
 
-    npm i --save jyoko.css
+`npm i --save jyoko.css`
+
 または
 
-    bower i --save jyoko.css
+`bower i --save jyoko.css`
+
+など
+
 
 ## 使い方
-markdownのコンパイル後に当該cssを読み込んでください。
-    <link rel="stylesheet" href="path/to/the/module/style.css">
+markdownのコンパイル後に当該cssを読み込むなどしください。
+
+`<link rel="stylesheet" href="node_modules/jyoko.css/jyoko.css">`
+
 
 ## 例
 [適用例](https://kamataryo.github.io/jyoko/)
