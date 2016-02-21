@@ -1,17 +1,17 @@
 # jyoko.css - 法律文css
 [![Build Status Images](https://travis-ci.org/KamataRyo/jyoko.svg)](https://travis-ci.org/KamataRyo/jyoko)
-[![npm](https://img.shields.io/npm/v/jyoko.css.svg)](https://www.npmjs.com/package/jyoko.css)
-[![Bower](https://img.shields.io/bower/v/jyoko.css.svg)]()
+[![npm](https://img.shields.io/npm/v/jyoko.svg)](https://www.npmjs.com/package/jyoko)
+[![Bower](https://img.shields.io/bower/v/jyoko.svg)](https://github.com/kamataryo/jyoko)
 
 markdownやhtmlで法律文や会社定款を楽に書くためのcss(sass)スニペット。
 
 ## インストール
 
-`npm i --save jyoko.css`
+`npm i --save jyoko`
 
 または
 
-`bower i --save jyoko.css`
+`bower i --save jyoko`
 
 など
 

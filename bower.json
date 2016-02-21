@@ -1,6 +1,6 @@
 {
-  "name": "jyoko.css",
-  "version": "1.0.2",
+  "name": "jyoko",
+  "version": "1.0.0",
   "homepage": "https://github.com/KamataRyo/jyoko",
   "authors": [
     "KamataRyo <mugil.cephalus+github@gmail.com>"
@@ -9,8 +9,9 @@
   "main": "style.css",
   "moduleType": [],
   "keywords": [
-    "法律",
     "条",
+    "法律",
+    "定款",
     "項",
     "css"
   ],
