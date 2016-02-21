@@ -1,9 +1,9 @@
 # jyoko.css - 法律文css
 [![Build Status Images](https://travis-ci.org/KamataRyo/jyoko.svg)](https://travis-ci.org/KamataRyo/jyoko)
-[![npm version](https://badge.fury.io/js/jyoko.css.svg)](https://badge.fury.io/js/jyoko.css)
-[![Bower version](https://badge.fury.io/bo/jyoko.css.svg)](https://badge.fury.io/bo/jyoko.css)
+[![npm](https://img.shields.io/npm/v/jyoko.css.svg)](https://www.npmjs.com/package/jyoko.css)
+[![Bower](https://img.shields.io/bower/v/jyoko.css.svg)]()
 
-markdownやhtmlで法律文や会社定款を楽に書くためのcss(sass)スニペット。暫定版。
+markdownやhtmlで法律文や会社定款を楽に書くためのcss(sass)スニペット。
 
 ## インストール
 
@@ -42,7 +42,5 @@ markdownのコンパイル後に当該cssを読み込むなどしください。
 - 条文の改定のスタイルを追加
     + .inserted
     + .deleted
-    + [data-inserted="#"] 附則への言及
 - h4に自動でidを振りたい
 - "前2条"・"第◯条(xxxxxについて)"などの記法に対応
-- jQueryプラグインなどにする
