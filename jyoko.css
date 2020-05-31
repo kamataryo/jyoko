@@ -1,0 +1,617 @@
+@charset "UTF-8";
+.jyoko h1,
+.jyoko h2,
+.jyoko h3,
+.jyoko h4,
+.jyoko ul,
+.jyoko ol,
+.jyoko li {
+  font-size: inherit;
+  font-weight: normal;
+  margin: 0;
+  padding: 0; }
+
+.jyoko ul,
+.jyoko ol {
+  list-style: none; }
+
+.jyoko h1 {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  counter-reset: hen_number; }
+
+.jyoko #fusoku {
+  counter-reset: jyo_number; }
+  .jyoko #fusoku:before {
+    content: "";
+    margin-right: 0; }
+  .jyoko #fusoku ~ ul,
+  .jyoko #fusoku ~ ol {
+    counter-reset: go_number;
+    display: block;
+    margin-left: 1rem; }
+    .jyoko #fusoku ~ ul > li,
+    .jyoko #fusoku ~ ol > li {
+      display: block;
+      counter-increment: go_number; }
+      .jyoko #fusoku ~ ul > li:before,
+      .jyoko #fusoku ~ ol > li:before {
+        content: counter(go_number, cjk-ideographic);
+        margin-right: 1rem;
+        font-weight: bold; }
+      .jyoko #fusoku ~ ul > li > ul,
+      .jyoko #fusoku ~ ul > li > ol,
+      .jyoko #fusoku ~ ol > li > ul,
+      .jyoko #fusoku ~ ol > li > ol {
+        counter-reset: go_number;
+        display: block;
+        margin-left: 1rem; }
+        .jyoko #fusoku ~ ul > li > ul > li,
+        .jyoko #fusoku ~ ul > li > ol > li,
+        .jyoko #fusoku ~ ol > li > ul > li,
+        .jyoko #fusoku ~ ol > li > ol > li {
+          display: block;
+          counter-increment: go_number; }
+          .jyoko #fusoku ~ ul > li > ul > li:before,
+          .jyoko #fusoku ~ ul > li > ol > li:before,
+          .jyoko #fusoku ~ ol > li > ul > li:before,
+          .jyoko #fusoku ~ ol > li > ol > li:before {
+            content: counter(go_number, katakana-iroha);
+            margin-right: 1rem;
+            font-weight: bold; }
+          .jyoko #fusoku ~ ul > li > ul > li > ul,
+          .jyoko #fusoku ~ ul > li > ul > li > ol,
+          .jyoko #fusoku ~ ul > li > ol > li > ul,
+          .jyoko #fusoku ~ ul > li > ol > li > ol,
+          .jyoko #fusoku ~ ol > li > ul > li > ul,
+          .jyoko #fusoku ~ ol > li > ul > li > ol,
+          .jyoko #fusoku ~ ol > li > ol > li > ul,
+          .jyoko #fusoku ~ ol > li > ol > li > ol {
+            counter-reset: go_number;
+            display: block;
+            margin-left: 1rem; }
+            .jyoko #fusoku ~ ul > li > ul > li > ul > li,
+            .jyoko #fusoku ~ ul > li > ul > li > ol > li,
+            .jyoko #fusoku ~ ul > li > ol > li > ul > li,
+            .jyoko #fusoku ~ ul > li > ol > li > ol > li,
+            .jyoko #fusoku ~ ol > li > ul > li > ul > li,
+            .jyoko #fusoku ~ ol > li > ul > li > ol > li,
+            .jyoko #fusoku ~ ol > li > ol > li > ul > li,
+            .jyoko #fusoku ~ ol > li > ol > li > ol > li {
+              display: block;
+              counter-increment: go_number; }
+              .jyoko #fusoku ~ ul > li > ul > li > ul > li:before,
+              .jyoko #fusoku ~ ul > li > ul > li > ol > li:before,
+              .jyoko #fusoku ~ ul > li > ol > li > ul > li:before,
+              .jyoko #fusoku ~ ul > li > ol > li > ol > li:before,
+              .jyoko #fusoku ~ ol > li > ul > li > ul > li:before,
+              .jyoko #fusoku ~ ol > li > ul > li > ol > li:before,
+              .jyoko #fusoku ~ ol > li > ol > li > ul > li:before,
+              .jyoko #fusoku ~ ol > li > ol > li > ol > li:before {
+                content: "（" counter(go_number, decimal) "）";
+                margin-right: 1rem;
+                font-weight: bold; }
+              .jyoko #fusoku ~ ul > li > ul > li > ul > li > ul,
+              .jyoko #fusoku ~ ul > li > ul > li > ul > li > ol,
+              .jyoko #fusoku ~ ul > li > ul > li > ol > li > ul,
+              .jyoko #fusoku ~ ul > li > ul > li > ol > li > ol,
+              .jyoko #fusoku ~ ul > li > ol > li > ul > li > ul,
+              .jyoko #fusoku ~ ul > li > ol > li > ul > li > ol,
+              .jyoko #fusoku ~ ul > li > ol > li > ol > li > ul,
+              .jyoko #fusoku ~ ul > li > ol > li > ol > li > ol,
+              .jyoko #fusoku ~ ol > li > ul > li > ul > li > ul,
+              .jyoko #fusoku ~ ol > li > ul > li > ul > li > ol,
+              .jyoko #fusoku ~ ol > li > ul > li > ol > li > ul,
+              .jyoko #fusoku ~ ol > li > ul > li > ol > li > ol,
+              .jyoko #fusoku ~ ol > li > ol > li > ul > li > ul,
+              .jyoko #fusoku ~ ol > li > ol > li > ul > li > ol,
+              .jyoko #fusoku ~ ol > li > ol > li > ol > li > ul,
+              .jyoko #fusoku ~ ol > li > ol > li > ol > li > ol {
+                counter-reset: go_number;
+                display: block;
+                margin-left: 1rem; }
+                .jyoko #fusoku ~ ul > li > ul > li > ul > li > ul > li,
+                .jyoko #fusoku ~ ul > li > ul > li > ul > li > ol > li,
+                .jyoko #fusoku ~ ul > li > ul > li > ol > li > ul > li,
+                .jyoko #fusoku ~ ul > li > ul > li > ol > li > ol > li,
+                .jyoko #fusoku ~ ul > li > ol > li > ul > li > ul > li,
+                .jyoko #fusoku ~ ul > li > ol > li > ul > li > ol > li,
+                .jyoko #fusoku ~ ul > li > ol > li > ol > li > ul > li,
+                .jyoko #fusoku ~ ul > li > ol > li > ol > li > ol > li,
+                .jyoko #fusoku ~ ol > li > ul > li > ul > li > ul > li,
+                .jyoko #fusoku ~ ol > li > ul > li > ul > li > ol > li,
+                .jyoko #fusoku ~ ol > li > ul > li > ol > li > ul > li,
+                .jyoko #fusoku ~ ol > li > ul > li > ol > li > ol > li,
+                .jyoko #fusoku ~ ol > li > ol > li > ul > li > ul > li,
+                .jyoko #fusoku ~ ol > li > ol > li > ul > li > ol > li,
+                .jyoko #fusoku ~ ol > li > ol > li > ol > li > ul > li,
+                .jyoko #fusoku ~ ol > li > ol > li > ol > li > ol > li {
+                  display: block;
+                  counter-increment: go_number; }
+                  .jyoko #fusoku ~ ul > li > ul > li > ul > li > ul > li:before,
+                  .jyoko #fusoku ~ ul > li > ul > li > ul > li > ol > li:before,
+                  .jyoko #fusoku ~ ul > li > ul > li > ol > li > ul > li:before,
+                  .jyoko #fusoku ~ ul > li > ul > li > ol > li > ol > li:before,
+                  .jyoko #fusoku ~ ul > li > ol > li > ul > li > ul > li:before,
+                  .jyoko #fusoku ~ ul > li > ol > li > ul > li > ol > li:before,
+                  .jyoko #fusoku ~ ul > li > ol > li > ol > li > ul > li:before,
+                  .jyoko #fusoku ~ ul > li > ol > li > ol > li > ol > li:before,
+                  .jyoko #fusoku ~ ol > li > ul > li > ul > li > ul > li:before,
+                  .jyoko #fusoku ~ ol > li > ul > li > ul > li > ol > li:before,
+                  .jyoko #fusoku ~ ol > li > ul > li > ol > li > ul > li:before,
+                  .jyoko #fusoku ~ ol > li > ul > li > ol > li > ol > li:before,
+                  .jyoko #fusoku ~ ol > li > ol > li > ul > li > ul > li:before,
+                  .jyoko #fusoku ~ ol > li > ol > li > ul > li > ol > li:before,
+                  .jyoko #fusoku ~ ol > li > ol > li > ol > li > ul > li:before,
+                  .jyoko #fusoku ~ ol > li > ol > li > ol > li > ol > li:before {
+                    content: "（" counter(go_number, lower-roman) "）";
+                    margin-right: 1rem;
+                    font-weight: bold; }
+                  .jyoko #fusoku ~ ul > li > ul > li > ul > li > ul > li > ul,
+                  .jyoko #fusoku ~ ul > li > ul > li > ul > li > ul > li > ol,
+                  .jyoko #fusoku ~ ul > li > ul > li > ul > li > ol > li > ul,
+                  .jyoko #fusoku ~ ul > li > ul > li > ul > li > ol > li > ol,
+                  .jyoko #fusoku ~ ul > li > ul > li > ol > li > ul > li > ul,
+                  .jyoko #fusoku ~ ul > li > ul > li > ol > li > ul > li > ol,
+                  .jyoko #fusoku ~ ul > li > ul > li > ol > li > ol > li > ul,
+                  .jyoko #fusoku ~ ul > li > ul > li > ol > li > ol > li > ol,
+                  .jyoko #fusoku ~ ul > li > ol > li > ul > li > ul > li > ul,
+                  .jyoko #fusoku ~ ul > li > ol > li > ul > li > ul > li > ol,
+                  .jyoko #fusoku ~ ul > li > ol > li > ul > li > ol > li > ul,
+                  .jyoko #fusoku ~ ul > li > ol > li > ul > li > ol > li > ol,
+                  .jyoko #fusoku ~ ul > li > ol > li > ol > li > ul > li > ul,
+                  .jyoko #fusoku ~ ul > li > ol > li > ol > li > ul > li > ol,
+                  .jyoko #fusoku ~ ul > li > ol > li > ol > li > ol > li > ul,
+                  .jyoko #fusoku ~ ul > li > ol > li > ol > li > ol > li > ol,
+                  .jyoko #fusoku ~ ol > li > ul > li > ul > li > ul > li > ul,
+                  .jyoko #fusoku ~ ol > li > ul > li > ul > li > ul > li > ol,
+                  .jyoko #fusoku ~ ol > li > ul > li > ul > li > ol > li > ul,
+                  .jyoko #fusoku ~ ol > li > ul > li > ul > li > ol > li > ol,
+                  .jyoko #fusoku ~ ol > li > ul > li > ol > li > ul > li > ul,
+                  .jyoko #fusoku ~ ol > li > ul > li > ol > li > ul > li > ol,
+                  .jyoko #fusoku ~ ol > li > ul > li > ol > li > ol > li > ul,
+                  .jyoko #fusoku ~ ol > li > ul > li > ol > li > ol > li > ol,
+                  .jyoko #fusoku ~ ol > li > ol > li > ul > li > ul > li > ul,
+                  .jyoko #fusoku ~ ol > li > ol > li > ul > li > ul > li > ol,
+                  .jyoko #fusoku ~ ol > li > ol > li > ul > li > ol > li > ul,
+                  .jyoko #fusoku ~ ol > li > ol > li > ul > li > ol > li > ol,
+                  .jyoko #fusoku ~ ol > li > ol > li > ol > li > ul > li > ul,
+                  .jyoko #fusoku ~ ol > li > ol > li > ol > li > ul > li > ol,
+                  .jyoko #fusoku ~ ol > li > ol > li > ol > li > ol > li > ul,
+                  .jyoko #fusoku ~ ol > li > ol > li > ol > li > ol > li > ol {
+                    counter-reset: go_number;
+                    display: block;
+                    margin-left: 1rem; }
+                    .jyoko #fusoku ~ ul > li > ul > li > ul > li > ul > li > ul > li,
+                    .jyoko #fusoku ~ ul > li > ul > li > ul > li > ul > li > ol > li,
+                    .jyoko #fusoku ~ ul > li > ul > li > ul > li > ol > li > ul > li,
+                    .jyoko #fusoku ~ ul > li > ul > li > ul > li > ol > li > ol > li,
+                    .jyoko #fusoku ~ ul > li > ul > li > ol > li > ul > li > ul > li,
+                    .jyoko #fusoku ~ ul > li > ul > li > ol > li > ul > li > ol > li,
+                    .jyoko #fusoku ~ ul > li > ul > li > ol > li > ol > li > ul > li,
+                    .jyoko #fusoku ~ ul > li > ul > li > ol > li > ol > li > ol > li,
+                    .jyoko #fusoku ~ ul > li > ol > li > ul > li > ul > li > ul > li,
+                    .jyoko #fusoku ~ ul > li > ol > li > ul > li > ul > li > ol > li,
+                    .jyoko #fusoku ~ ul > li > ol > li > ul > li > ol > li > ul > li,
+                    .jyoko #fusoku ~ ul > li > ol > li > ul > li > ol > li > ol > li,
+                    .jyoko #fusoku ~ ul > li > ol > li > ol > li > ul > li > ul > li,
+                    .jyoko #fusoku ~ ul > li > ol > li > ol > li > ul > li > ol > li,
+                    .jyoko #fusoku ~ ul > li > ol > li > ol > li > ol > li > ul > li,
+                    .jyoko #fusoku ~ ul > li > ol > li > ol > li > ol > li > ol > li,
+                    .jyoko #fusoku ~ ol > li > ul > li > ul > li > ul > li > ul > li,
+                    .jyoko #fusoku ~ ol > li > ul > li > ul > li > ul > li > ol > li,
+                    .jyoko #fusoku ~ ol > li > ul > li > ul > li > ol > li > ul > li,
+                    .jyoko #fusoku ~ ol > li > ul > li > ul > li > ol > li > ol > li,
+                    .jyoko #fusoku ~ ol > li > ul > li > ol > li > ul > li > ul > li,
+                    .jyoko #fusoku ~ ol > li > ul > li > ol > li > ul > li > ol > li,
+                    .jyoko #fusoku ~ ol > li > ul > li > ol > li > ol > li > ul > li,
+                    .jyoko #fusoku ~ ol > li > ul > li > ol > li > ol > li > ol > li,
+                    .jyoko #fusoku ~ ol > li > ol > li > ul > li > ul > li > ul > li,
+                    .jyoko #fusoku ~ ol > li > ol > li > ul > li > ul > li > ol > li,
+                    .jyoko #fusoku ~ ol > li > ol > li > ul > li > ol > li > ul > li,
+                    .jyoko #fusoku ~ ol > li > ol > li > ul > li > ol > li > ol > li,
+                    .jyoko #fusoku ~ ol > li > ol > li > ol > li > ul > li > ul > li,
+                    .jyoko #fusoku ~ ol > li > ol > li > ol > li > ul > li > ol > li,
+                    .jyoko #fusoku ~ ol > li > ol > li > ol > li > ol > li > ul > li,
+                    .jyoko #fusoku ~ ol > li > ol > li > ol > li > ol > li > ol > li {
+                      display: block;
+                      counter-increment: go_number; }
+
+.jyoko h2 {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  text-indent: 1rem;
+  counter-reset: syo_number;
+  counter-increment: hen_number; }
+  .jyoko h2:before {
+    content: "第" counter(hen_number, cjk-ideographic) "編";
+    margin-right: 1rem; }
+
+.jyoko h3 {
+  display: block;
+  font-weight: bold;
+  margin: 1rem 0;
+  text-indent: 1rem;
+  counter-increment: syo_number; }
+  .jyoko h3:before {
+    content: "第" counter(syo_number, cjk-ideographic) "章";
+    margin-right: 1rem; }
+
+.jyoko h4 {
+  display: block;
+  font-weight: normal;
+  text-indent: 1rem; }
+  .jyoko h4:before {
+    content: "（"; }
+  .jyoko h4:after {
+    content: "）"; }
+
+.jyoko h4 ~ ul,
+.jyoko h4 ~ ol {
+  counter-increment: jyo_number;
+  counter-reset: ko_number;
+  display: block;
+  margin: 0 0 1rem 1rem;
+  text-indent: -1rem; }
+  .jyoko h4 ~ ul > li,
+  .jyoko h4 ~ ol > li {
+    display: block;
+    counter-increment: ko_number; }
+    .jyoko h4 ~ ul > li:nth-child(1):before,
+    .jyoko h4 ~ ol > li:nth-child(1):before {
+      content: "第" counter(jyo_number, cjk-ideographic) "条";
+      font-weight: bold;
+      margin-right: 1rem; }
+    .jyoko h4 ~ ul > li:not(:nth-child(1)):before,
+    .jyoko h4 ~ ol > li:not(:nth-child(1)):before {
+      content: counter(ko_number);
+      margin-right: 1rem; }
+    .jyoko h4 ~ ul > li > ul,
+    .jyoko h4 ~ ul > li > ol,
+    .jyoko h4 ~ ol > li > ul,
+    .jyoko h4 ~ ol > li > ol {
+      counter-reset: go_number;
+      display: block;
+      margin-left: 1rem; }
+      .jyoko h4 ~ ul > li > ul > li,
+      .jyoko h4 ~ ul > li > ol > li,
+      .jyoko h4 ~ ol > li > ul > li,
+      .jyoko h4 ~ ol > li > ol > li {
+        display: block;
+        counter-increment: go_number; }
+        .jyoko h4 ~ ul > li > ul > li:before,
+        .jyoko h4 ~ ul > li > ol > li:before,
+        .jyoko h4 ~ ol > li > ul > li:before,
+        .jyoko h4 ~ ol > li > ol > li:before {
+          content: counter(go_number, cjk-ideographic);
+          margin-right: 1rem;
+          font-weight: bold; }
+        .jyoko h4 ~ ul > li > ul > li > ul,
+        .jyoko h4 ~ ul > li > ul > li > ol,
+        .jyoko h4 ~ ul > li > ol > li > ul,
+        .jyoko h4 ~ ul > li > ol > li > ol,
+        .jyoko h4 ~ ol > li > ul > li > ul,
+        .jyoko h4 ~ ol > li > ul > li > ol,
+        .jyoko h4 ~ ol > li > ol > li > ul,
+        .jyoko h4 ~ ol > li > ol > li > ol {
+          counter-reset: go_number;
+          display: block;
+          margin-left: 1rem; }
+          .jyoko h4 ~ ul > li > ul > li > ul > li,
+          .jyoko h4 ~ ul > li > ul > li > ol > li,
+          .jyoko h4 ~ ul > li > ol > li > ul > li,
+          .jyoko h4 ~ ul > li > ol > li > ol > li,
+          .jyoko h4 ~ ol > li > ul > li > ul > li,
+          .jyoko h4 ~ ol > li > ul > li > ol > li,
+          .jyoko h4 ~ ol > li > ol > li > ul > li,
+          .jyoko h4 ~ ol > li > ol > li > ol > li {
+            display: block;
+            counter-increment: go_number; }
+            .jyoko h4 ~ ul > li > ul > li > ul > li:before,
+            .jyoko h4 ~ ul > li > ul > li > ol > li:before,
+            .jyoko h4 ~ ul > li > ol > li > ul > li:before,
+            .jyoko h4 ~ ul > li > ol > li > ol > li:before,
+            .jyoko h4 ~ ol > li > ul > li > ul > li:before,
+            .jyoko h4 ~ ol > li > ul > li > ol > li:before,
+            .jyoko h4 ~ ol > li > ol > li > ul > li:before,
+            .jyoko h4 ~ ol > li > ol > li > ol > li:before {
+              content: counter(go_number, katakana-iroha);
+              margin-right: 1rem;
+              font-weight: bold; }
+            .jyoko h4 ~ ul > li > ul > li > ul > li > ul,
+            .jyoko h4 ~ ul > li > ul > li > ul > li > ol,
+            .jyoko h4 ~ ul > li > ul > li > ol > li > ul,
+            .jyoko h4 ~ ul > li > ul > li > ol > li > ol,
+            .jyoko h4 ~ ul > li > ol > li > ul > li > ul,
+            .jyoko h4 ~ ul > li > ol > li > ul > li > ol,
+            .jyoko h4 ~ ul > li > ol > li > ol > li > ul,
+            .jyoko h4 ~ ul > li > ol > li > ol > li > ol,
+            .jyoko h4 ~ ol > li > ul > li > ul > li > ul,
+            .jyoko h4 ~ ol > li > ul > li > ul > li > ol,
+            .jyoko h4 ~ ol > li > ul > li > ol > li > ul,
+            .jyoko h4 ~ ol > li > ul > li > ol > li > ol,
+            .jyoko h4 ~ ol > li > ol > li > ul > li > ul,
+            .jyoko h4 ~ ol > li > ol > li > ul > li > ol,
+            .jyoko h4 ~ ol > li > ol > li > ol > li > ul,
+            .jyoko h4 ~ ol > li > ol > li > ol > li > ol {
+              counter-reset: go_number;
+              display: block;
+              margin-left: 1rem; }
+              .jyoko h4 ~ ul > li > ul > li > ul > li > ul > li,
+              .jyoko h4 ~ ul > li > ul > li > ul > li > ol > li,
+              .jyoko h4 ~ ul > li > ul > li > ol > li > ul > li,
+              .jyoko h4 ~ ul > li > ul > li > ol > li > ol > li,
+              .jyoko h4 ~ ul > li > ol > li > ul > li > ul > li,
+              .jyoko h4 ~ ul > li > ol > li > ul > li > ol > li,
+              .jyoko h4 ~ ul > li > ol > li > ol > li > ul > li,
+              .jyoko h4 ~ ul > li > ol > li > ol > li > ol > li,
+              .jyoko h4 ~ ol > li > ul > li > ul > li > ul > li,
+              .jyoko h4 ~ ol > li > ul > li > ul > li > ol > li,
+              .jyoko h4 ~ ol > li > ul > li > ol > li > ul > li,
+              .jyoko h4 ~ ol > li > ul > li > ol > li > ol > li,
+              .jyoko h4 ~ ol > li > ol > li > ul > li > ul > li,
+              .jyoko h4 ~ ol > li > ol > li > ul > li > ol > li,
+              .jyoko h4 ~ ol > li > ol > li > ol > li > ul > li,
+              .jyoko h4 ~ ol > li > ol > li > ol > li > ol > li {
+                display: block;
+                counter-increment: go_number; }
+                .jyoko h4 ~ ul > li > ul > li > ul > li > ul > li:before,
+                .jyoko h4 ~ ul > li > ul > li > ul > li > ol > li:before,
+                .jyoko h4 ~ ul > li > ul > li > ol > li > ul > li:before,
+                .jyoko h4 ~ ul > li > ul > li > ol > li > ol > li:before,
+                .jyoko h4 ~ ul > li > ol > li > ul > li > ul > li:before,
+                .jyoko h4 ~ ul > li > ol > li > ul > li > ol > li:before,
+                .jyoko h4 ~ ul > li > ol > li > ol > li > ul > li:before,
+                .jyoko h4 ~ ul > li > ol > li > ol > li > ol > li:before,
+                .jyoko h4 ~ ol > li > ul > li > ul > li > ul > li:before,
+                .jyoko h4 ~ ol > li > ul > li > ul > li > ol > li:before,
+                .jyoko h4 ~ ol > li > ul > li > ol > li > ul > li:before,
+                .jyoko h4 ~ ol > li > ul > li > ol > li > ol > li:before,
+                .jyoko h4 ~ ol > li > ol > li > ul > li > ul > li:before,
+                .jyoko h4 ~ ol > li > ol > li > ul > li > ol > li:before,
+                .jyoko h4 ~ ol > li > ol > li > ol > li > ul > li:before,
+                .jyoko h4 ~ ol > li > ol > li > ol > li > ol > li:before {
+                  content: "（" counter(go_number, decimal) "）";
+                  margin-right: 1rem;
+                  font-weight: bold; }
+                .jyoko h4 ~ ul > li > ul > li > ul > li > ul > li > ul,
+                .jyoko h4 ~ ul > li > ul > li > ul > li > ul > li > ol,
+                .jyoko h4 ~ ul > li > ul > li > ul > li > ol > li > ul,
+                .jyoko h4 ~ ul > li > ul > li > ul > li > ol > li > ol,
+                .jyoko h4 ~ ul > li > ul > li > ol > li > ul > li > ul,
+                .jyoko h4 ~ ul > li > ul > li > ol > li > ul > li > ol,
+                .jyoko h4 ~ ul > li > ul > li > ol > li > ol > li > ul,
+                .jyoko h4 ~ ul > li > ul > li > ol > li > ol > li > ol,
+                .jyoko h4 ~ ul > li > ol > li > ul > li > ul > li > ul,
+                .jyoko h4 ~ ul > li > ol > li > ul > li > ul > li > ol,
+                .jyoko h4 ~ ul > li > ol > li > ul > li > ol > li > ul,
+                .jyoko h4 ~ ul > li > ol > li > ul > li > ol > li > ol,
+                .jyoko h4 ~ ul > li > ol > li > ol > li > ul > li > ul,
+                .jyoko h4 ~ ul > li > ol > li > ol > li > ul > li > ol,
+                .jyoko h4 ~ ul > li > ol > li > ol > li > ol > li > ul,
+                .jyoko h4 ~ ul > li > ol > li > ol > li > ol > li > ol,
+                .jyoko h4 ~ ol > li > ul > li > ul > li > ul > li > ul,
+                .jyoko h4 ~ ol > li > ul > li > ul > li > ul > li > ol,
+                .jyoko h4 ~ ol > li > ul > li > ul > li > ol > li > ul,
+                .jyoko h4 ~ ol > li > ul > li > ul > li > ol > li > ol,
+                .jyoko h4 ~ ol > li > ul > li > ol > li > ul > li > ul,
+                .jyoko h4 ~ ol > li > ul > li > ol > li > ul > li > ol,
+                .jyoko h4 ~ ol > li > ul > li > ol > li > ol > li > ul,
+                .jyoko h4 ~ ol > li > ul > li > ol > li > ol > li > ol,
+                .jyoko h4 ~ ol > li > ol > li > ul > li > ul > li > ul,
+                .jyoko h4 ~ ol > li > ol > li > ul > li > ul > li > ol,
+                .jyoko h4 ~ ol > li > ol > li > ul > li > ol > li > ul,
+                .jyoko h4 ~ ol > li > ol > li > ul > li > ol > li > ol,
+                .jyoko h4 ~ ol > li > ol > li > ol > li > ul > li > ul,
+                .jyoko h4 ~ ol > li > ol > li > ol > li > ul > li > ol,
+                .jyoko h4 ~ ol > li > ol > li > ol > li > ol > li > ul,
+                .jyoko h4 ~ ol > li > ol > li > ol > li > ol > li > ol {
+                  counter-reset: go_number;
+                  display: block;
+                  margin-left: 1rem; }
+                  .jyoko h4 ~ ul > li > ul > li > ul > li > ul > li > ul > li,
+                  .jyoko h4 ~ ul > li > ul > li > ul > li > ul > li > ol > li,
+                  .jyoko h4 ~ ul > li > ul > li > ul > li > ol > li > ul > li,
+                  .jyoko h4 ~ ul > li > ul > li > ul > li > ol > li > ol > li,
+                  .jyoko h4 ~ ul > li > ul > li > ol > li > ul > li > ul > li,
+                  .jyoko h4 ~ ul > li > ul > li > ol > li > ul > li > ol > li,
+                  .jyoko h4 ~ ul > li > ul > li > ol > li > ol > li > ul > li,
+                  .jyoko h4 ~ ul > li > ul > li > ol > li > ol > li > ol > li,
+                  .jyoko h4 ~ ul > li > ol > li > ul > li > ul > li > ul > li,
+                  .jyoko h4 ~ ul > li > ol > li > ul > li > ul > li > ol > li,
+                  .jyoko h4 ~ ul > li > ol > li > ul > li > ol > li > ul > li,
+                  .jyoko h4 ~ ul > li > ol > li > ul > li > ol > li > ol > li,
+                  .jyoko h4 ~ ul > li > ol > li > ol > li > ul > li > ul > li,
+                  .jyoko h4 ~ ul > li > ol > li > ol > li > ul > li > ol > li,
+                  .jyoko h4 ~ ul > li > ol > li > ol > li > ol > li > ul > li,
+                  .jyoko h4 ~ ul > li > ol > li > ol > li > ol > li > ol > li,
+                  .jyoko h4 ~ ol > li > ul > li > ul > li > ul > li > ul > li,
+                  .jyoko h4 ~ ol > li > ul > li > ul > li > ul > li > ol > li,
+                  .jyoko h4 ~ ol > li > ul > li > ul > li > ol > li > ul > li,
+                  .jyoko h4 ~ ol > li > ul > li > ul > li > ol > li > ol > li,
+                  .jyoko h4 ~ ol > li > ul > li > ol > li > ul > li > ul > li,
+                  .jyoko h4 ~ ol > li > ul > li > ol > li > ul > li > ol > li,
+                  .jyoko h4 ~ ol > li > ul > li > ol > li > ol > li > ul > li,
+                  .jyoko h4 ~ ol > li > ul > li > ol > li > ol > li > ol > li,
+                  .jyoko h4 ~ ol > li > ol > li > ul > li > ul > li > ul > li,
+                  .jyoko h4 ~ ol > li > ol > li > ul > li > ul > li > ol > li,
+                  .jyoko h4 ~ ol > li > ol > li > ul > li > ol > li > ul > li,
+                  .jyoko h4 ~ ol > li > ol > li > ul > li > ol > li > ol > li,
+                  .jyoko h4 ~ ol > li > ol > li > ol > li > ul > li > ul > li,
+                  .jyoko h4 ~ ol > li > ol > li > ol > li > ul > li > ol > li,
+                  .jyoko h4 ~ ol > li > ol > li > ol > li > ol > li > ul > li,
+                  .jyoko h4 ~ ol > li > ol > li > ol > li > ol > li > ol > li {
+                    display: block;
+                    counter-increment: go_number; }
+                    .jyoko h4 ~ ul > li > ul > li > ul > li > ul > li > ul > li:before,
+                    .jyoko h4 ~ ul > li > ul > li > ul > li > ul > li > ol > li:before,
+                    .jyoko h4 ~ ul > li > ul > li > ul > li > ol > li > ul > li:before,
+                    .jyoko h4 ~ ul > li > ul > li > ul > li > ol > li > ol > li:before,
+                    .jyoko h4 ~ ul > li > ul > li > ol > li > ul > li > ul > li:before,
+                    .jyoko h4 ~ ul > li > ul > li > ol > li > ul > li > ol > li:before,
+                    .jyoko h4 ~ ul > li > ul > li > ol > li > ol > li > ul > li:before,
+                    .jyoko h4 ~ ul > li > ul > li > ol > li > ol > li > ol > li:before,
+                    .jyoko h4 ~ ul > li > ol > li > ul > li > ul > li > ul > li:before,
+                    .jyoko h4 ~ ul > li > ol > li > ul > li > ul > li > ol > li:before,
+                    .jyoko h4 ~ ul > li > ol > li > ul > li > ol > li > ul > li:before,
+                    .jyoko h4 ~ ul > li > ol > li > ul > li > ol > li > ol > li:before,
+                    .jyoko h4 ~ ul > li > ol > li > ol > li > ul > li > ul > li:before,
+                    .jyoko h4 ~ ul > li > ol > li > ol > li > ul > li > ol > li:before,
+                    .jyoko h4 ~ ul > li > ol > li > ol > li > ol > li > ul > li:before,
+                    .jyoko h4 ~ ul > li > ol > li > ol > li > ol > li > ol > li:before,
+                    .jyoko h4 ~ ol > li > ul > li > ul > li > ul > li > ul > li:before,
+                    .jyoko h4 ~ ol > li > ul > li > ul > li > ul > li > ol > li:before,
+                    .jyoko h4 ~ ol > li > ul > li > ul > li > ol > li > ul > li:before,
+                    .jyoko h4 ~ ol > li > ul > li > ul > li > ol > li > ol > li:before,
+                    .jyoko h4 ~ ol > li > ul > li > ol > li > ul > li > ul > li:before,
+                    .jyoko h4 ~ ol > li > ul > li > ol > li > ul > li > ol > li:before,
+                    .jyoko h4 ~ ol > li > ul > li > ol > li > ol > li > ul > li:before,
+                    .jyoko h4 ~ ol > li > ul > li > ol > li > ol > li > ol > li:before,
+                    .jyoko h4 ~ ol > li > ol > li > ul > li > ul > li > ul > li:before,
+                    .jyoko h4 ~ ol > li > ol > li > ul > li > ul > li > ol > li:before,
+                    .jyoko h4 ~ ol > li > ol > li > ul > li > ol > li > ul > li:before,
+                    .jyoko h4 ~ ol > li > ol > li > ul > li > ol > li > ol > li:before,
+                    .jyoko h4 ~ ol > li > ol > li > ol > li > ul > li > ul > li:before,
+                    .jyoko h4 ~ ol > li > ol > li > ol > li > ul > li > ol > li:before,
+                    .jyoko h4 ~ ol > li > ol > li > ol > li > ol > li > ul > li:before,
+                    .jyoko h4 ~ ol > li > ol > li > ol > li > ol > li > ol > li:before {
+                      content: "（" counter(go_number, lower-roman) "）";
+                      margin-right: 1rem;
+                      font-weight: bold; }
+                    .jyoko h4 ~ ul > li > ul > li > ul > li > ul > li > ul > li > ul,
+                    .jyoko h4 ~ ul > li > ul > li > ul > li > ul > li > ul > li > ol,
+                    .jyoko h4 ~ ul > li > ul > li > ul > li > ul > li > ol > li > ul,
+                    .jyoko h4 ~ ul > li > ul > li > ul > li > ul > li > ol > li > ol,
+                    .jyoko h4 ~ ul > li > ul > li > ul > li > ol > li > ul > li > ul,
+                    .jyoko h4 ~ ul > li > ul > li > ul > li > ol > li > ul > li > ol,
+                    .jyoko h4 ~ ul > li > ul > li > ul > li > ol > li > ol > li > ul,
+                    .jyoko h4 ~ ul > li > ul > li > ul > li > ol > li > ol > li > ol,
+                    .jyoko h4 ~ ul > li > ul > li > ol > li > ul > li > ul > li > ul,
+                    .jyoko h4 ~ ul > li > ul > li > ol > li > ul > li > ul > li > ol,
+                    .jyoko h4 ~ ul > li > ul > li > ol > li > ul > li > ol > li > ul,
+                    .jyoko h4 ~ ul > li > ul > li > ol > li > ul > li > ol > li > ol,
+                    .jyoko h4 ~ ul > li > ul > li > ol > li > ol > li > ul > li > ul,
+                    .jyoko h4 ~ ul > li > ul > li > ol > li > ol > li > ul > li > ol,
+                    .jyoko h4 ~ ul > li > ul > li > ol > li > ol > li > ol > li > ul,
+                    .jyoko h4 ~ ul > li > ul > li > ol > li > ol > li > ol > li > ol,
+                    .jyoko h4 ~ ul > li > ol > li > ul > li > ul > li > ul > li > ul,
+                    .jyoko h4 ~ ul > li > ol > li > ul > li > ul > li > ul > li > ol,
+                    .jyoko h4 ~ ul > li > ol > li > ul > li > ul > li > ol > li > ul,
+                    .jyoko h4 ~ ul > li > ol > li > ul > li > ul > li > ol > li > ol,
+                    .jyoko h4 ~ ul > li > ol > li > ul > li > ol > li > ul > li > ul,
+                    .jyoko h4 ~ ul > li > ol > li > ul > li > ol > li > ul > li > ol,
+                    .jyoko h4 ~ ul > li > ol > li > ul > li > ol > li > ol > li > ul,
+                    .jyoko h4 ~ ul > li > ol > li > ul > li > ol > li > ol > li > ol,
+                    .jyoko h4 ~ ul > li > ol > li > ol > li > ul > li > ul > li > ul,
+                    .jyoko h4 ~ ul > li > ol > li > ol > li > ul > li > ul > li > ol,
+                    .jyoko h4 ~ ul > li > ol > li > ol > li > ul > li > ol > li > ul,
+                    .jyoko h4 ~ ul > li > ol > li > ol > li > ul > li > ol > li > ol,
+                    .jyoko h4 ~ ul > li > ol > li > ol > li > ol > li > ul > li > ul,
+                    .jyoko h4 ~ ul > li > ol > li > ol > li > ol > li > ul > li > ol,
+                    .jyoko h4 ~ ul > li > ol > li > ol > li > ol > li > ol > li > ul,
+                    .jyoko h4 ~ ul > li > ol > li > ol > li > ol > li > ol > li > ol,
+                    .jyoko h4 ~ ol > li > ul > li > ul > li > ul > li > ul > li > ul,
+                    .jyoko h4 ~ ol > li > ul > li > ul > li > ul > li > ul > li > ol,
+                    .jyoko h4 ~ ol > li > ul > li > ul > li > ul > li > ol > li > ul,
+                    .jyoko h4 ~ ol > li > ul > li > ul > li > ul > li > ol > li > ol,
+                    .jyoko h4 ~ ol > li > ul > li > ul > li > ol > li > ul > li > ul,
+                    .jyoko h4 ~ ol > li > ul > li > ul > li > ol > li > ul > li > ol,
+                    .jyoko h4 ~ ol > li > ul > li > ul > li > ol > li > ol > li > ul,
+                    .jyoko h4 ~ ol > li > ul > li > ul > li > ol > li > ol > li > ol,
+                    .jyoko h4 ~ ol > li > ul > li > ol > li > ul > li > ul > li > ul,
+                    .jyoko h4 ~ ol > li > ul > li > ol > li > ul > li > ul > li > ol,
+                    .jyoko h4 ~ ol > li > ul > li > ol > li > ul > li > ol > li > ul,
+                    .jyoko h4 ~ ol > li > ul > li > ol > li > ul > li > ol > li > ol,
+                    .jyoko h4 ~ ol > li > ul > li > ol > li > ol > li > ul > li > ul,
+                    .jyoko h4 ~ ol > li > ul > li > ol > li > ol > li > ul > li > ol,
+                    .jyoko h4 ~ ol > li > ul > li > ol > li > ol > li > ol > li > ul,
+                    .jyoko h4 ~ ol > li > ul > li > ol > li > ol > li > ol > li > ol,
+                    .jyoko h4 ~ ol > li > ol > li > ul > li > ul > li > ul > li > ul,
+                    .jyoko h4 ~ ol > li > ol > li > ul > li > ul > li > ul > li > ol,
+                    .jyoko h4 ~ ol > li > ol > li > ul > li > ul > li > ol > li > ul,
+                    .jyoko h4 ~ ol > li > ol > li > ul > li > ul > li > ol > li > ol,
+                    .jyoko h4 ~ ol > li > ol > li > ul > li > ol > li > ul > li > ul,
+                    .jyoko h4 ~ ol > li > ol > li > ul > li > ol > li > ul > li > ol,
+                    .jyoko h4 ~ ol > li > ol > li > ul > li > ol > li > ol > li > ul,
+                    .jyoko h4 ~ ol > li > ol > li > ul > li > ol > li > ol > li > ol,
+                    .jyoko h4 ~ ol > li > ol > li > ol > li > ul > li > ul > li > ul,
+                    .jyoko h4 ~ ol > li > ol > li > ol > li > ul > li > ul > li > ol,
+                    .jyoko h4 ~ ol > li > ol > li > ol > li > ul > li > ol > li > ul,
+                    .jyoko h4 ~ ol > li > ol > li > ol > li > ul > li > ol > li > ol,
+                    .jyoko h4 ~ ol > li > ol > li > ol > li > ol > li > ul > li > ul,
+                    .jyoko h4 ~ ol > li > ol > li > ol > li > ol > li > ul > li > ol,
+                    .jyoko h4 ~ ol > li > ol > li > ol > li > ol > li > ol > li > ul,
+                    .jyoko h4 ~ ol > li > ol > li > ol > li > ol > li > ol > li > ol {
+                      counter-reset: go_number;
+                      display: block;
+                      margin-left: 1rem; }
+                      .jyoko h4 ~ ul > li > ul > li > ul > li > ul > li > ul > li > ul > li,
+                      .jyoko h4 ~ ul > li > ul > li > ul > li > ul > li > ul > li > ol > li,
+                      .jyoko h4 ~ ul > li > ul > li > ul > li > ul > li > ol > li > ul > li,
+                      .jyoko h4 ~ ul > li > ul > li > ul > li > ul > li > ol > li > ol > li,
+                      .jyoko h4 ~ ul > li > ul > li > ul > li > ol > li > ul > li > ul > li,
+                      .jyoko h4 ~ ul > li > ul > li > ul > li > ol > li > ul > li > ol > li,
+                      .jyoko h4 ~ ul > li > ul > li > ul > li > ol > li > ol > li > ul > li,
+                      .jyoko h4 ~ ul > li > ul > li > ul > li > ol > li > ol > li > ol > li,
+                      .jyoko h4 ~ ul > li > ul > li > ol > li > ul > li > ul > li > ul > li,
+                      .jyoko h4 ~ ul > li > ul > li > ol > li > ul > li > ul > li > ol > li,
+                      .jyoko h4 ~ ul > li > ul > li > ol > li > ul > li > ol > li > ul > li,
+                      .jyoko h4 ~ ul > li > ul > li > ol > li > ul > li > ol > li > ol > li,
+                      .jyoko h4 ~ ul > li > ul > li > ol > li > ol > li > ul > li > ul > li,
+                      .jyoko h4 ~ ul > li > ul > li > ol > li > ol > li > ul > li > ol > li,
+                      .jyoko h4 ~ ul > li > ul > li > ol > li > ol > li > ol > li > ul > li,
+                      .jyoko h4 ~ ul > li > ul > li > ol > li > ol > li > ol > li > ol > li,
+                      .jyoko h4 ~ ul > li > ol > li > ul > li > ul > li > ul > li > ul > li,
+                      .jyoko h4 ~ ul > li > ol > li > ul > li > ul > li > ul > li > ol > li,
+                      .jyoko h4 ~ ul > li > ol > li > ul > li > ul > li > ol > li > ul > li,
+                      .jyoko h4 ~ ul > li > ol > li > ul > li > ul > li > ol > li > ol > li,
+                      .jyoko h4 ~ ul > li > ol > li > ul > li > ol > li > ul > li > ul > li,
+                      .jyoko h4 ~ ul > li > ol > li > ul > li > ol > li > ul > li > ol > li,
+                      .jyoko h4 ~ ul > li > ol > li > ul > li > ol > li > ol > li > ul > li,
+                      .jyoko h4 ~ ul > li > ol > li > ul > li > ol > li > ol > li > ol > li,
+                      .jyoko h4 ~ ul > li > ol > li > ol > li > ul > li > ul > li > ul > li,
+                      .jyoko h4 ~ ul > li > ol > li > ol > li > ul > li > ul > li > ol > li,
+                      .jyoko h4 ~ ul > li > ol > li > ol > li > ul > li > ol > li > ul > li,
+                      .jyoko h4 ~ ul > li > ol > li > ol > li > ul > li > ol > li > ol > li,
+                      .jyoko h4 ~ ul > li > ol > li > ol > li > ol > li > ul > li > ul > li,
+                      .jyoko h4 ~ ul > li > ol > li > ol > li > ol > li > ul > li > ol > li,
+                      .jyoko h4 ~ ul > li > ol > li > ol > li > ol > li > ol > li > ul > li,
+                      .jyoko h4 ~ ul > li > ol > li > ol > li > ol > li > ol > li > ol > li,
+                      .jyoko h4 ~ ol > li > ul > li > ul > li > ul > li > ul > li > ul > li,
+                      .jyoko h4 ~ ol > li > ul > li > ul > li > ul > li > ul > li > ol > li,
+                      .jyoko h4 ~ ol > li > ul > li > ul > li > ul > li > ol > li > ul > li,
+                      .jyoko h4 ~ ol > li > ul > li > ul > li > ul > li > ol > li > ol > li,
+                      .jyoko h4 ~ ol > li > ul > li > ul > li > ol > li > ul > li > ul > li,
+                      .jyoko h4 ~ ol > li > ul > li > ul > li > ol > li > ul > li > ol > li,
+                      .jyoko h4 ~ ol > li > ul > li > ul > li > ol > li > ol > li > ul > li,
+                      .jyoko h4 ~ ol > li > ul > li > ul > li > ol > li > ol > li > ol > li,
+                      .jyoko h4 ~ ol > li > ul > li > ol > li > ul > li > ul > li > ul > li,
+                      .jyoko h4 ~ ol > li > ul > li > ol > li > ul > li > ul > li > ol > li,
+                      .jyoko h4 ~ ol > li > ul > li > ol > li > ul > li > ol > li > ul > li,
+                      .jyoko h4 ~ ol > li > ul > li > ol > li > ul > li > ol > li > ol > li,
+                      .jyoko h4 ~ ol > li > ul > li > ol > li > ol > li > ul > li > ul > li,
+                      .jyoko h4 ~ ol > li > ul > li > ol > li > ol > li > ul > li > ol > li,
+                      .jyoko h4 ~ ol > li > ul > li > ol > li > ol > li > ol > li > ul > li,
+                      .jyoko h4 ~ ol > li > ul > li > ol > li > ol > li > ol > li > ol > li,
+                      .jyoko h4 ~ ol > li > ol > li > ul > li > ul > li > ul > li > ul > li,
+                      .jyoko h4 ~ ol > li > ol > li > ul > li > ul > li > ul > li > ol > li,
+                      .jyoko h4 ~ ol > li > ol > li > ul > li > ul > li > ol > li > ul > li,
+                      .jyoko h4 ~ ol > li > ol > li > ul > li > ul > li > ol > li > ol > li,
+                      .jyoko h4 ~ ol > li > ol > li > ul > li > ol > li > ul > li > ul > li,
+                      .jyoko h4 ~ ol > li > ol > li > ul > li > ol > li > ul > li > ol > li,
+                      .jyoko h4 ~ ol > li > ol > li > ul > li > ol > li > ol > li > ul > li,
+                      .jyoko h4 ~ ol > li > ol > li > ul > li > ol > li > ol > li > ol > li,
+                      .jyoko h4 ~ ol > li > ol > li > ol > li > ul > li > ul > li > ul > li,
+                      .jyoko h4 ~ ol > li > ol > li > ol > li > ul > li > ul > li > ol > li,
+                      .jyoko h4 ~ ol > li > ol > li > ol > li > ul > li > ol > li > ul > li,
+                      .jyoko h4 ~ ol > li > ol > li > ol > li > ul > li > ol > li > ol > li,
+                      .jyoko h4 ~ ol > li > ol > li > ol > li > ol > li > ul > li > ul > li,
+                      .jyoko h4 ~ ol > li > ol > li > ol > li > ol > li > ul > li > ol > li,
+                      .jyoko h4 ~ ol > li > ol > li > ol > li > ol > li > ol > li > ul > li,
+                      .jyoko h4 ~ ol > li > ol > li > ol > li > ol > li > ol > li > ol > li {
+                        display: block;
+                        counter-increment: go_number; }

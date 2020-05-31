@@ -1,73 +1,71 @@
-// リセット的なもの
-html, body {
-    font-family: serif;
-    font-size: 18px;
-}
-h1, h2, h3, h4, ul, ol, li {
+.jyoko {
+  h1,
+  h2,
+  h3,
+  h4,
+  ul,
+  ol,
+  li {
     font-size: inherit;
     font-weight: normal;
     margin: 0;
     padding: 0;
-}
-ul, ol {
+  }
+  ul,
+  ol {
     list-style: none;
-}
+  }
 
-
-// 再帰的に号を定義
-@mixin go($depth:1) {
-
-    $number_format :
-        counter(go_number, cjk-ideographic),
-        counter(go_number, katakana-iroha),
-        "（"counter(go_number, decimal)"）",
-        "（"counter(go_number, lower-roman)"）";
+  // 再帰的に号を定義
+  @mixin go($depth: 1) {
+    $number_format: counter(go_number, cjk-ideographic),
+      counter(go_number, katakana-iroha), "（" counter(go_number, decimal) "）",
+      "（" counter(go_number, lower-roman) "）";
 
     counter-reset: go_number;
-    display:block;
+    display: block;
     margin-left: 1rem;
-    &>li {
-        display: block;
-        counter-increment: go_number;
+    & > li {
+      display: block;
+      counter-increment: go_number;
 
-        @if $depth < length($number_format) + 1 {
-            &:before {
-                content: nth($number_format, $depth);
-                margin-right: 1rem;
-                font-weight: bold;
-            }
-            &>ul, &>ol {
-                @include go($depth + 1);
-            }
+      @if $depth < length($number_format) + 1 {
+        &:before {
+          content: nth($number_format, $depth);
+          margin-right: 1rem;
+          font-weight: bold;
         }
+        & > ul,
+        & > ol {
+          @include go($depth + 1);
+        }
+      }
     }
-}
+  }
 
-
-
-// タイトル
-h1{
+  // タイトル
+  h1 {
     display: block;
     font-size: 1rem;
     font-weight: bold;
     margin: 1rem 0;
     counter-reset: hen_number;
-}
+  }
 
-#fusoku {
+  #fusoku {
     counter-reset: jyo_number;
     &:before {
-        content: "";
-        margin-right:0;
+      content: "";
+      margin-right: 0;
     }
-    &~ul, &~ol {
-        @include go;
+    & ~ ul,
+    & ~ ol {
+      @include go;
     }
+  }
 
-}
-
-// 編
-h2 {
+  // 編
+  h2 {
     display: block;
     font-size: 1rem;
     font-weight: bold;
@@ -76,64 +74,67 @@ h2 {
     counter-reset: syo_number;
     counter-increment: hen_number;
     &:before {
-        content: "第"counter(hen_number, cjk-ideographic)"編";
-        margin-right: 1rem;
+      content: "第" counter(hen_number, cjk-ideographic) "編";
+      margin-right: 1rem;
     }
-}
+  }
 
-// 章
-h3 {
+  // 章
+  h3 {
     display: block;
     font-weight: bold;
     margin: 1rem 0;
     text-indent: 1rem;
     counter-increment: syo_number;
     &:before {
-        content: "第"counter(syo_number, cjk-ideographic)"章";
-        margin-right: 1rem;
+      content: "第" counter(syo_number, cjk-ideographic) "章";
+      margin-right: 1rem;
     }
-}
+  }
 
-// 条
-h4 {
+  // 条
+  h4 {
     display: block;
     font-weight: normal;
     text-indent: 1rem;
     &:before {
-        content: "（";
+      content: "（";
     }
     &:after {
-        content: "）";
+      content: "）";
     }
-}
+  }
 
-//項
-h4~ul, h4~ol {
+  //項
+  h4 ~ ul,
+  h4 ~ ol {
     counter-increment: jyo_number;
     counter-reset: ko_number;
     display: block;
     margin: 0 0 1rem 1rem;
     text-indent: -1rem;
-    &>li {
-        display: block;
-        counter-increment: ko_number;
-        &:nth-child(1) {
-            &:before {
-                content: "第"counter(jyo_number, cjk-ideographic)"条";
-                font-weight: bold;
-                margin-right: 1rem;
-            }
+    & > li {
+      display: block;
+      counter-increment: ko_number;
+      &:nth-child(1) {
+        &:before {
+          content: "第" counter(jyo_number, cjk-ideographic) "条";
+          font-weight: bold;
+          margin-right: 1rem;
         }
-        &:not(:nth-child(1)) {
-            &:before {
-                content: counter(ko_number);
-                margin-right: 1rem;
-            }
+      }
+      &:not(:nth-child(1)) {
+        &:before {
+          content: counter(ko_number);
+          margin-right: 1rem;
         }
+      }
 
-        // 号
-        &>ul, &>ol {
-            @include go;
-        }
+      // 号
+      & > ul,
+      & > ol {
+        @include go;
+      }
     }
+  }
 }

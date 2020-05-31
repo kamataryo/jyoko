@@ -4,25 +4,21 @@
   "description": "法律文・定款css",
   "main": "style.css",
   "scripts": {
-    "test": "gulp test",
-    "build": "gulp build"
+    "build": "gulp build && cp ./jyoko.css ./docs/style.css",
+    "prepublish": "npm run build"
   },
   "keywords": [
-    "条",
     "法律",
     "定款",
-    "項",
+    "利用規約",
+    "プライバシーポリシー",
     "css"
   ],
-  "author": "kamataryo",
+  "author": "kamataryo <mugil.cephalus+github.com@gmail.com>",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:KamataRyo/jyoko.git"
-  },
+  "repository": "git@github.com:kamataryo/jyoko.git",
   "devDependencies": {
-    "coffee-script": "^1.10.0",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^2.2.0"
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
   }
 }
